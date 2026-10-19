@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T11:57:17+00:00",
+  "generatedAt": "2026-10-19T11:58:47+00:00",
   "title": "Design System: MichelArt Construction",
   "extensions": {
     "colorMeta": {
@@ -116,6 +116,54 @@
           "#E6EFFC"
         ]
       },
+      "promise-mist": {
+        "role": "neutral",
+        "displayName": "Promise Mist",
+        "canonical": "#DCE1E7",
+        "oklch": "oklch(90.8% 0.010 253)",
+        "tonalRamp": [
+          "#080B0F",
+          "#22252A",
+          "#3E4247",
+          "#5D6267",
+          "#7E8388",
+          "#A1A5AB",
+          "#C5CACF",
+          "#EAEFF5"
+        ]
+      },
+      "hero-glow": {
+        "role": "neutral",
+        "displayName": "Hero Glow",
+        "canonical": "#2F3B4B",
+        "oklch": "oklch(34.8% 0.032 256)",
+        "tonalRamp": [
+          "#030B18",
+          "#1A2635",
+          "#374353",
+          "#556274",
+          "#768496",
+          "#98A6BA",
+          "#BCCBDF",
+          "#E5F0FE"
+        ]
+      },
+      "photo-backing": {
+        "role": "neutral",
+        "displayName": "Photo Backing",
+        "canonical": "#26303D",
+        "oklch": "oklch(30.6% 0.027 255)",
+        "tonalRamp": [
+          "#040B16",
+          "#1C2632",
+          "#384351",
+          "#576271",
+          "#788393",
+          "#9AA6B6",
+          "#BECADB",
+          "#E4F0FE"
+        ]
+      },
       "m-amber": {
         "role": "primary",
         "displayName": "M Amber",
@@ -228,6 +276,22 @@
           "#EEEEEE"
         ]
       },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder",
+        "canonical": "#6B7280",
+        "oklch": "oklch(55.1% 0.023 264)",
+        "tonalRamp": [
+          "#070B15",
+          "#1F2531",
+          "#3C424F",
+          "#5B616F",
+          "#7B8291",
+          "#9EA5B4",
+          "#C2C9D9",
+          "#E7EFFF"
+        ]
+      },
       "danger": {
         "role": "error",
         "displayName": "Danger",
@@ -261,6 +325,66 @@
       "body": {
         "displayName": "Body",
         "purpose": "Running text, 32 to 44ch."
+      },
+      "display-desktop": {
+        "displayName": "Display Desktop",
+        "purpose": "Hero headline from 1024px, no width cap."
+      },
+      "display-landscape": {
+        "displayName": "Display Landscape",
+        "purpose": "Hero headline on landscape phones (max-height 500px), sized by height."
+      },
+      "footer-name": {
+        "displayName": "Footer Name",
+        "purpose": "Business name closing the page."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero promise line, promise-mist on slate."
+      },
+      "lead-desktop": {
+        "displayName": "Lead Desktop",
+        "purpose": "Hero promise from 1024px."
+      },
+      "care": {
+        "displayName": "Care",
+        "purpose": "Single closing brand line under the steps."
+      },
+      "tagline": {
+        "displayName": "Tagline",
+        "purpose": "Amber footer tagline."
+      },
+      "brand-lockup": {
+        "displayName": "Brand Lockup",
+        "purpose": "Header wordmark MICHELART; 14px below 380px, 18px from 1024px."
+      },
+      "brand-lockup-narrow": {
+        "displayName": "Brand Lockup Narrow",
+        "purpose": "Wordmark below 380px."
+      },
+      "brand-lockup-desktop": {
+        "displayName": "Brand Lockup Desktop",
+        "purpose": "Wordmark from 1024px."
+      },
+      "brand-sub": {
+        "displayName": "Brand Sub",
+        "purpose": "CONSTRUCTION sub-line of the logo lockup; part of the logo, not a heading device."
+      },
+      "brand-sub-desktop": {
+        "displayName": "Brand Sub Desktop",
+        "purpose": "Lockup sub-line from 1024px."
+      },
+      "phone": {
+        "displayName": "Phone",
+        "purpose": "Header phone number, tabular figures."
+      },
+      "phone-narrow": {
+        "displayName": "Phone Narrow",
+        "purpose": "Header phone number below 380px."
+      },
+      "legal": {
+        "displayName": "Legal",
+        "purpose": "Copyright line; the 14px floor."
       },
       "label": {
         "displayName": "Label",
@@ -297,9 +421,9 @@
         "value": "#1A2029",
         "purpose": "The course above, in shadow, at the top of an eave strip."
       },
-      "hero-glow": {
+      "hero-ground": {
         "value": "radial-gradient(120% 70% at 50% 100%, #2F3B4B 0%, #1D2530 62%)",
-        "purpose": "Hero ground only."
+        "purpose": "Hero ground only (hero-glow into dusk-slate)."
       }
     },
     "shapes": [
@@ -435,6 +559,14 @@
       "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-q{background:var(--plaster-2);padding:24px;font-family:var(--font);color:var(--ink)}.ds-chips{display:flex;flex-wrap:wrap;gap:10px}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px}.ds-chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border:2px solid var(--line);border-radius:999px;background:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}.ds-chip span:hover{border-color:var(--focus)}.ds-chip input:focus-visible+span{border-color:var(--focus);box-shadow:0 0 0 3px var(--focus-ring)}.ds-chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}"
     },
     {
+      "name": "Sent Panel",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Form confirmation: white panel (10px) with the composed message in an 8px plaster inset.",
+      "html": "<div class=\"ds-q\"><div class=\"ds-sent\"><p><b>Your messages app should open with this:</b></p><pre>Hi Mike, this is Ana in Little Falls. I'd like a free estimate for: Kitchen.</pre></div></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-q{background:var(--plaster-2);padding:24px;font-family:var(--font);color:var(--ink)}.ds-sent{max-width:640px;padding:18px;border-radius:var(--radius);background:#fff;border:2px solid var(--line)}.ds-sent p{margin:0 0 10px}.ds-sent pre{white-space:pre-wrap;font:400 16px/1.5 var(--font);margin:0;padding:12px;background:var(--plaster);border-radius:8px}"
+    },
+    {
       "name": "Header",
       "kind": "nav",
       "refersTo": null,
@@ -523,7 +655,7 @@
       "Don't add a sticky bottom call bar or repeat the phone number elsewhere on the first screen; it lives top-right.",
       "Don't highlight a whole service row on hover (no background, shadow or outline on the row).",
       "Don't add CSS shadows to cards or panels; depth belongs to the shingles.",
-      "Don't set text below 14px, or form text below 16px."
+      "Don't set text below 14px outside the brand lockup, or form text below 16px."
     ]
   }
 }

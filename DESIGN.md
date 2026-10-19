@@ -9,6 +9,9 @@ colors:
   ink-soft: "#4B5563"
   on-slate: "#F3F4F2"
   on-slate-soft: "#AFB8C4"
+  promise-mist: "#DCE1E7"
+  hero-glow: "#2F3B4B"
+  photo-backing: "#26303D"
   m-amber: "#F4A21C"
   m-amber-hi: "#FFB43A"
   form-blue: "#2E6BE6"
@@ -16,11 +19,24 @@ colors:
   hairline: "#C9CDC7"
   arrow-well: "#D3D7D0"
   field-white: "#FFFFFF"
+  placeholder: "#6B7280"
   danger: "#B42318"
 typography:
   display:
     fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
     fontSize: "clamp(34px, 11.4vw, 108px)"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.01em"
+  display-desktop:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(40px, 7vw, 104px)"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.01em"
+  display-landscape:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(34px, 11svh, 56px)"
     fontWeight: 900
     lineHeight: 0.98
     letterSpacing: "-0.01em"
@@ -30,12 +46,38 @@ typography:
     fontWeight: 900
     lineHeight: 0.98
     letterSpacing: "-0.01em"
+  footer-name:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(28px, 7.4vw, 52px)"
+    fontWeight: 900
+    lineHeight: 1
+    letterSpacing: "-0.005em"
   title:
     fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
     fontSize: "clamp(20px, 5.4vw, 28px)"
     fontWeight: 900
     lineHeight: 1.05
     letterSpacing: "0.01em"
+  lead:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(17px, 4.6vw, 21px)"
+    fontWeight: 400
+    lineHeight: 1.4
+  lead-desktop:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "22px"
+    fontWeight: 400
+    lineHeight: 1.4
+  care:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(20px, 5vw, 26px)"
+    fontWeight: 700
+    lineHeight: 1.35
+  tagline:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "18px"
+    fontWeight: 700
+    lineHeight: 1.55
   body:
     fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
     fontSize: "17px"
@@ -47,8 +89,54 @@ typography:
     fontWeight: 800
     lineHeight: 1
     letterSpacing: "0.04em"
+  brand-lockup:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 900
+    lineHeight: 1.05
+    letterSpacing: "0.06em"
+  brand-lockup-narrow:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "14px"
+    fontWeight: 900
+    lineHeight: 1.05
+    letterSpacing: "0.04em"
+  brand-lockup-desktop:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "18px"
+    fontWeight: 900
+    lineHeight: 1.05
+    letterSpacing: "0.06em"
+  brand-sub:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "11px"
+    fontWeight: 700
+    lineHeight: 1.55
+    letterSpacing: "0.18em"
+  brand-sub-desktop:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "12px"
+    fontWeight: 700
+    lineHeight: 1.55
+    letterSpacing: "0.18em"
+  phone:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "16px"
+    fontWeight: 800
+    lineHeight: 1
+  phone-narrow:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 800
+    lineHeight: 1
+  legal:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "14px"
+    fontWeight: 400
+    lineHeight: 1.55
 rounded:
   control: "10px"
+  inset: "8px"
   pill: "999px"
 spacing:
   pad: "clamp(16px, 5vw, 56px)"
@@ -138,16 +226,20 @@ A two-ground palette of dusk slate and plaster, with one warm accent taken from 
 - **Form Blue** (form-blue): the hover and focus edge of text inputs, chips and form buttons, with a 3px ring at 25% opacity (rgba(46,107,230,.25)). It never fills anything.
 
 ### Neutral
-- **Dusk Slate** (dusk-slate): the dark ground for the hero, Recent Work and the footer; also the browser theme color. The hero lifts it with a radial glow (#2F3B4B at the bottom center fading to slate at 62%).
+- **Dusk Slate** (dusk-slate): the dark ground for the hero, Recent Work and the footer; also the browser theme color. The hero lifts it with a radial glow (hero glow at the bottom center fading to slate at 62%).
 - **Ink Slate** (ink-slate): the same value as text and fills on light grounds: body text, the 2px rule over the service list, step-marker blocks, selected chips, the ink button.
 - **Fresh Plaster** (fresh-plaster): the light ground for What We Build and How a Job Goes; also the background of the sent-message preview.
 - **Set Plaster** (set-plaster): the slightly deeper light ground of the quote section, so the form reads as its own room.
-- **On Slate** (on-slate) and **On Slate Soft** (on-slate-soft): primary and secondary text on dark grounds. The hero promise line uses #DCE1E7 between them.
+- **On Slate** (on-slate) and **On Slate Soft** (on-slate-soft): primary and secondary text on dark grounds.
+- **Promise Mist** (promise-mist): the hero lead line only, a step between on-slate and on-slate-soft so the promise reads under the headline without competing.
+- **Hero Glow** (hero-glow): the lighter slate at the bottom center of the hero's radial gradient, lifting the sky toward the roof.
+- **Photo Backing** (photo-backing): the slate well behind each photo tile, visible while images load.
 - **Ink Soft** (ink-soft): secondary text on light grounds (step descriptions, notes, ledes, "(optional)").
 - **Control Edge** (control-edge): 2px borders on inputs, chips and the sent panel (3.9:1 on white).
 - **Hairline** (hairline): 1px dividers between service rows.
 - **Arrow Well** (arrow-well): the resting disc behind each service arrow.
 - **Field White** (field-white): input, chip and sent-panel fills.
+- **Placeholder** (placeholder): input placeholder text.
 - **Danger** (danger): error text and invalid field edges.
 
 ### Named Rules
@@ -165,11 +257,18 @@ A two-ground palette of dusk slate and plaster, with one warm accent taken from 
 **Character:** One family at two extremes: 900-weight uppercase for anything that names a thing, 400-weight sentence case for anything that explains. It reads like painted signage on a work truck.
 
 ### Hierarchy
-- **Display** (900, clamp(34px, 11.4vw, 108px), 0.98, uppercase, -0.01em): the hero headline only, capped at 12ch on phones; one word carries amber. On desktop it switches to clamp(40px, 7vw, 104px) with no width cap.
+- **Display** (900, clamp(34px, 11.4vw, 108px), 0.98, uppercase, -0.01em): the hero headline only, capped at 12ch on phones; one word carries amber. **Display Desktop** (clamp(40px, 7vw, 104px), from 1024px) drops the width cap; **Display Landscape** (clamp(34px, 11svh, 56px)) sizes by height on landscape phones so the promise and buttons stay on the first screen.
 - **Headline** (900, clamp(32px, 8.4vw, 64px), 0.98, uppercase): section titles; balanced wrapping.
+- **Footer Name** (900, clamp(28px, 7.4vw, 52px), 1, uppercase, -0.005em): the business name closing the page; one step below headline.
 - **Title** (900, clamp(20px, 5.4vw, 28px), 1.05, uppercase, +0.01em): service row names; step titles use clamp(21px, 5.4vw, 26px) at 1.1.
-- **Body** (400, 17px, 1.55): all running text, held to 32 to 44ch. The hero promise steps up to clamp(17px, 4.6vw, 21px) at 1.4; the care line is 700 at clamp(20px, 5vw, 26px).
-- **Label** (800, 16 to 17px, uppercase, +0.02 to +0.04em): buttons and form labels. Nothing in the interface is smaller than 14px (the copyright line), and form text is 16px or more so iOS does not zoom.
+- **Lead** (400, clamp(17px, 4.6vw, 21px), 1.4; **Lead Desktop** 22px from 1024px): the hero promise line only, in promise mist, 32ch (40ch on desktop).
+- **Care** (700, clamp(20px, 5vw, 26px), 1.35): the single closing brand line under the steps, 30ch.
+- **Tagline** (700, 18px): the amber footer tagline under the footer name.
+- **Body** (400, 17px, 1.55): all running text, held to 32 to 44ch; secondary notes and form hints at 16px.
+- **Label** (800, 16 to 17px, uppercase, +0.02 to +0.04em): buttons and form labels.
+- **Brand Lockup** (900, 15px, +0.06em; 14px at +0.04em below 380px; 18px from 1024px) over **Brand Sub** (700, 11px, +0.18em, on-slate-soft; 12px from 1024px): the two-line header wordmark beside the logo. The sub-line is part of the logo lockup, not a heading device.
+- **Phone** (800, 16px, tabular figures; 15px below 380px): the header phone number.
+- **Legal** (400, 14px, on-slate-soft): the copyright line, and the floor: nothing outside the brand lockup is smaller than 14px; form text is 16px or more so iOS does not zoom.
 
 ### Named Rules
 **The Shout-or-Speak Rule.** Uppercase comes with weight 800 to 900; sentence case comes with 400 to 700. No light uppercase, no heavy sentence-case paragraphs.
@@ -195,7 +294,7 @@ Flat. Depth comes from ground changes (slate against plaster) and from the shing
 
 ## Shapes
 
-Controls are gently rounded (10px): buttons, inputs, the sent panel. Chips are full pills. The only circle is the service arrow well. Everything that is a material rather than a control (photos, step-number blocks) has square corners with two opposite corners cut at the angle of the M's strokes: top-right and bottom-left, 22px across by 12px deep on photos, 12px by 7px on step markers. Borders are 2px on controls and on the rule over the service list, 1px on row dividers.
+Controls are gently rounded (10px): buttons, inputs, the sent panel. Insets nested inside a rounded panel step down to 8px (the composed-message preview in the sent panel). Chips are full pills. The only circle is the service arrow well. Everything that is a material rather than a control (photos, step-number blocks) has square corners with two opposite corners cut at the angle of the M's strokes: top-right and bottom-left, 22px across by 12px deep on photos, 12px by 7px on step markers. Borders are 2px on controls and on the rule over the service list, 1px on row dividers.
 
 ## Components
 
@@ -255,4 +354,4 @@ A 64px canvas strip with a single course of new pewter tabs above a drip edge an
 - **Don't** add a sticky bottom call bar or repeat the phone number elsewhere on the first screen; it lives top-right.
 - **Don't** highlight a whole service row on hover (no background, shadow or outline on the row).
 - **Don't** add CSS shadows to cards or panels; depth belongs to the shingles.
-- **Don't** set text below 14px, or form text below 16px.
+- **Don't** set text below 14px outside the brand lockup, or form text below 16px.
