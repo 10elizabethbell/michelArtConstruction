@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T11:57:17+00:00",
+  "title": "Design System: MichelArt Construction",
+  "extensions": {
+    "colorMeta": {
+      "dusk-slate": {
+        "role": "neutral",
+        "displayName": "Dusk Slate",
+        "canonical": "#1D2530",
+        "oklch": "oklch(26.2% 0.024 256)",
+        "tonalRamp": [
+          "#050B15",
+          "#1E2631",
+          "#3A434F",
+          "#59626F",
+          "#798391",
+          "#9CA6B4",
+          "#BFCAD9",
+          "#E5F0FF"
+        ]
+      },
+      "fresh-plaster": {
+        "role": "neutral",
+        "displayName": "Fresh Plaster",
+        "canonical": "#ECEDEA",
+        "oklch": "oklch(94.4% 0.004 122)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252523",
+          "#414240",
+          "#61625F",
+          "#828380",
+          "#A4A5A3",
+          "#C8C9C7",
+          "#EEEFEC"
+        ]
+      },
+      "set-plaster": {
+        "role": "neutral",
+        "displayName": "Set Plaster",
+        "canonical": "#DEE1DC",
+        "oklch": "oklch(90.6% 0.007 132)",
+        "tonalRamp": [
+          "#0A0C09",
+          "#242622",
+          "#40433F",
+          "#60625E",
+          "#81837F",
+          "#A3A6A1",
+          "#C7CAC5",
+          "#ECF0EA"
+        ]
+      },
+      "ink-slate": {
+        "role": "neutral",
+        "displayName": "Ink Slate",
+        "canonical": "#1D2530",
+        "oklch": "oklch(26.2% 0.024 256)",
+        "tonalRamp": [
+          "#050B15",
+          "#1E2631",
+          "#3A434F",
+          "#59626F",
+          "#798391",
+          "#9CA6B4",
+          "#BFCAD9",
+          "#E5F0FF"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#4B5563",
+        "oklch": "oklch(44.6% 0.026 257)",
+        "tonalRamp": [
+          "#050B16",
+          "#1D2632",
+          "#394350",
+          "#586270",
+          "#788392",
+          "#9BA6B6",
+          "#BECADB",
+          "#E5EFFE"
+        ]
+      },
+      "on-slate": {
+        "role": "neutral",
+        "displayName": "On Slate",
+        "canonical": "#F3F4F2",
+        "oklch": "oklch(96.6% 0.003 128)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252524",
+          "#414241",
+          "#616160",
+          "#828381",
+          "#A4A5A3",
+          "#C8C9C7",
+          "#EEEFED"
+        ]
+      },
+      "on-slate-soft": {
+        "role": "neutral",
+        "displayName": "On Slate Soft",
+        "canonical": "#AFB8C4",
+        "oklch": "oklch(77.9% 0.020 256)",
+        "tonalRamp": [
+          "#060B13",
+          "#1F262F",
+          "#3B434D",
+          "#5A626D",
+          "#7B838E",
+          "#9DA6B2",
+          "#C1CAD6",
+          "#E6EFFC"
+        ]
+      },
+      "m-amber": {
+        "role": "primary",
+        "displayName": "M Amber",
+        "canonical": "#F4A21C",
+        "oklch": "oklch(77.5% 0.160 72)",
+        "tonalRamp": [
+          "#170700",
+          "#361F00",
+          "#5D3900",
+          "#865500",
+          "#B07413",
+          "#DD931D",
+          "#FCBB68",
+          "#FEEBD5"
+        ]
+      },
+      "m-amber-hi": {
+        "role": "primary",
+        "displayName": "M Amber Hi",
+        "canonical": "#FFB43A",
+        "oklch": "oklch(82.2% 0.155 75)",
+        "tonalRamp": [
+          "#160700",
+          "#352000",
+          "#5A3B00",
+          "#835705",
+          "#AC7618",
+          "#D99623",
+          "#FBBC5F",
+          "#FEEBD3"
+        ]
+      },
+      "form-blue": {
+        "role": "secondary",
+        "displayName": "Form Blue",
+        "canonical": "#2E6BE6",
+        "oklch": "oklch(56.0% 0.197 262)",
+        "tonalRamp": [
+          "#000038",
+          "#001868",
+          "#0033A0",
+          "#1955CF",
+          "#3C7AF6",
+          "#74A3FD",
+          "#AECAFD",
+          "#E6EFFE"
+        ]
+      },
+      "control-edge": {
+        "role": "neutral",
+        "displayName": "Control Edge",
+        "canonical": "#7C837C",
+        "oklch": "oklch(60.2% 0.013 145)",
+        "tonalRamp": [
+          "#080D08",
+          "#212721",
+          "#3E443E",
+          "#5D635D",
+          "#7E857E",
+          "#A0A7A0",
+          "#C4CCC4",
+          "#E9F1E9"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#C9CDC7",
+        "oklch": "oklch(84.3% 0.009 135)",
+        "tonalRamp": [
+          "#090C08",
+          "#232622",
+          "#40433E",
+          "#5F625D",
+          "#80847E",
+          "#A2A6A1",
+          "#C7CAC5",
+          "#ECF0EA"
+        ]
+      },
+      "arrow-well": {
+        "role": "neutral",
+        "displayName": "Arrow Well",
+        "canonical": "#D3D7D0",
+        "oklch": "oklch(87.4% 0.010 131)",
+        "tonalRamp": [
+          "#0A0C08",
+          "#232621",
+          "#40433D",
+          "#5F625C",
+          "#80847D",
+          "#A3A6A0",
+          "#C7CBC4",
+          "#ECF0E9"
+        ]
+      },
+      "field-white": {
+        "role": "neutral",
+        "displayName": "Field White",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "danger": {
+        "role": "error",
+        "displayName": "Danger",
+        "canonical": "#B42318",
+        "oklch": "oklch(50.0% 0.182 30)",
+        "tonalRamp": [
+          "#220000",
+          "#4E0000",
+          "#800200",
+          "#B12015",
+          "#DA4A3B",
+          "#FC7664",
+          "#FCB5A9",
+          "#FFE9E5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; 900 uppercase, one amber word. Desktop: clamp(40px, 7vw, 104px)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, 900 uppercase, balanced wrap."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service row names and step titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, 32 to 44ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons (800, 17px, +0.02em) and form labels (800, 16px, +0.04em), uppercase."
+      }
+    },
+    "materials": {
+      "shingle-new": {
+        "base": [
+          "#565F6B",
+          "#747D89"
+        ],
+        "shadow": "#2C333C",
+        "purpose": "Pewter architectural tabs laid by the roofer and in eave strips."
+      },
+      "shingle-old": {
+        "base": [
+          "#80715C",
+          "#9E8F76"
+        ],
+        "shadow": "#54483A",
+        "purpose": "Tired 3-tab roof being replaced; algae, curl, moss."
+      },
+      "gutter": {
+        "stops": [
+          "#F4F5F6",
+          "#DADDE2",
+          "#AEB4BD"
+        ],
+        "dripEdge": "#B9BEC6",
+        "purpose": "White gutter closing the hero roof and every eave strip."
+      },
+      "eave-shade": {
+        "value": "#1A2029",
+        "purpose": "The course above, in shadow, at the top of an eave strip."
+      },
+      "hero-glow": {
+        "value": "radial-gradient(120% 70% at 50% 100%, #2F3B4B 0%, #1D2530 62%)",
+        "purpose": "Hero ground only."
+      }
+    },
+    "shapes": [
+      {
+        "name": "logo-cut-photo",
+        "value": "polygon(0 0,calc(100% - 22px) 0,100% 12px,100% 100%,22px 100%,0 calc(100% - 12px))",
+        "purpose": "Photo tiles."
+      },
+      {
+        "name": "logo-cut-marker",
+        "value": "polygon(0 0,calc(100% - 12px) 0,100% 7px,100% 100%,12px 100%,0 calc(100% - 7px))",
+        "purpose": "Step-number blocks."
+      }
+    ],
+    "shadows": [
+      {
+        "name": "amber-lift",
+        "value": "0 6px 14px -8px rgba(6,10,16,.55)",
+        "purpose": "Under the primary amber button only."
+      },
+      {
+        "name": "form-ring",
+        "value": "0 0 0 3px rgba(46,107,230,.25)",
+        "purpose": "Hover/focus ring on form controls."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-dark",
+        "value": "3px solid #F4A21C, offset 3px",
+        "purpose": "Global focus outline on slate."
+      },
+      {
+        "name": "focus-light",
+        "value": "3px solid #1D2530, offset 3px",
+        "purpose": "Focus outline on plaster grounds and the quote section."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state",
+        "value": ".18s ease-out",
+        "purpose": "Button and arrow color/position changes."
+      },
+      {
+        "name": "control",
+        "value": ".15s ease-out",
+        "purpose": "Form border and ring changes."
+      },
+      {
+        "name": "press",
+        "value": "transform .12s ease-out, translateY(1px)",
+        "purpose": "Button active state."
+      },
+      {
+        "name": "roof",
+        "value": "ROOF tunables: PLACE_MS 28, TEAR_MS 7, REACH 58, IDLE_RESUME 2600, DONE_HOLD 5200, LIFT 9, STIFF 70, DAMP 9, WIND 1.6, DEPTH 0.955, HIP 0.64, 14 courses, tab 34px phone / 56px desktop",
+        "purpose": "Hero roof and eave strips. ROOF.STILL or prefers-reduced-motion freezes to one finished roof."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "379px",
+        "purpose": "Header tightens."
+      },
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Hero and form buttons go inline."
+      },
+      {
+        "name": "md",
+        "value": "760px",
+        "purpose": "Three-column work grid; desktop shingle size."
+      },
+      {
+        "name": "lg",
+        "value": "900px",
+        "purpose": "Three-column steps; footer splits."
+      },
+      {
+        "name": "xl",
+        "value": "1024px",
+        "purpose": "5fr/7fr split on services and quote."
+      },
+      {
+        "name": "landscape-phone",
+        "value": "(orientation:landscape) and (max-height:500px)",
+        "purpose": "Keep promise and buttons on the first screen."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one amber action per region: Text Mike, Text this to Mike.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" d=\"M4 5h16v11H9l-5 4z\"/></svg>Text Mike</a></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-dark{background:var(--slate);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 24px;border-radius:var(--radius);font:800 17px/1 var(--font);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease-out,border-color .18s ease-out,color .18s ease-out,transform .12s ease-out}.ds-btn:active{transform:translateY(1px)}.ds-btn svg{width:22px;height:22px}.ds-btn-primary{background:var(--amber);border-color:var(--amber);color:var(--ink);box-shadow:0 6px 14px -8px rgba(6,10,16,.55)}.ds-btn-primary:hover{background:var(--amber-hi);border-color:var(--amber-hi)}.ds-btn-primary:focus-visible{outline:3px solid var(--amber);outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on slate; turns amber on hover.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn ds-btn-ghost\" href=\"#\">Get a free estimate</a></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-dark{background:var(--slate);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 24px;border-radius:var(--radius);font:800 17px/1 var(--font);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease-out,border-color .18s ease-out,color .18s ease-out,transform .12s ease-out}.ds-btn:active{transform:translateY(1px)}.ds-btn svg{width:22px;height:22px}.ds-btn-ghost{background:transparent;border-color:rgba(243,244,242,.6);color:var(--on-slate)}.ds-btn-ghost:hover{border-color:var(--amber);color:var(--amber)}.ds-btn-ghost:focus-visible{outline:3px solid var(--amber);outline-offset:3px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Full-width service link; only the arrow responds to hover and focus.",
+      "html": "<div class=\"ds-light\"><ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><b>Roofing</b><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\"><b>Kitchens</b><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a></li></ul></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-light{background:var(--plaster);padding:24px;font-family:var(--font)}.ds-rows{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}.ds-row{display:flex;align-items:center;gap:16px;min-height:72px;padding:14px 2px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}.ds-row:focus-visible{outline:none}.ds-row b{flex:1;font-weight:900;font-size:28px;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}.ds-arrow{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#D3D7D0;color:var(--ink);transition:background-color .18s ease-out,transform .18s ease-out}.ds-arrow svg{width:18px;height:18px}.ds-row:hover .ds-arrow{background:var(--amber);transform:translateX(3px)}.ds-row:focus-visible .ds-arrow{background:var(--amber);outline:3px solid var(--ink);outline-offset:3px}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Quote form field; blue edge and ring on hover and focus.",
+      "html": "<div class=\"ds-q\"><label class=\"ds-label\" for=\"ds-n\">Your name</label><input class=\"ds-input\" id=\"ds-n\" type=\"text\" placeholder=\"First and last name\"></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-q{background:var(--plaster-2);padding:24px;font-family:var(--font);color:var(--ink)}.ds-label{display:block;font-weight:800;font-size:16px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}.ds-input{width:100%;box-sizing:border-box;min-height:54px;padding:13px 14px;font:400 17px/1.4 var(--font);color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:var(--radius);transition:border-color .15s ease-out,box-shadow .15s ease-out}.ds-input::placeholder{color:#6B7280}.ds-input:hover{border-color:var(--focus)}.ds-input:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px var(--focus-ring)}"
+    },
+    {
+      "name": "Job Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Multi-select job type pill; ink fill when selected.",
+      "html": "<div class=\"ds-q\"><div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Roofing</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Kitchen</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Tile / shower</span></label></div></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-q{background:var(--plaster-2);padding:24px;font-family:var(--font);color:var(--ink)}.ds-chips{display:flex;flex-wrap:wrap;gap:10px}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px}.ds-chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border:2px solid var(--line);border-radius:999px;background:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}.ds-chip span:hover{border-color:var(--focus)}.ds-chip input:focus-visible+span{border-color:var(--focus);box-shadow:0 0 0 3px var(--focus-ring)}.ds-chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Logo wordmark left, phone number top-right; no menu.",
+      "html": "<div class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><span><b>MICHELART</b><small>CONSTRUCTION</small></span></a><a class=\"ds-phone\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" d=\"M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z\"/></svg>(718) 909-8060</a></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;background:var(--slate);color:var(--on-slate);font-family:var(--font)}.ds-brand{text-decoration:none;color:inherit;min-height:44px;display:flex;align-items:center}.ds-brand b{display:block;font-weight:900;font-size:15px;letter-spacing:.06em;line-height:1.05}.ds-brand small{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--on-slate-soft)}.ds-phone{display:flex;align-items:center;gap:8px;min-height:44px;font-weight:800;font-size:16px;color:inherit;text-decoration:none;font-variant-numeric:tabular-nums}.ds-phone svg{width:18px;height:18px;color:var(--amber)}.ds-phone:hover{color:var(--amber)}.ds-phone:focus-visible,.ds-brand:focus-visible{outline:3px solid var(--amber);outline-offset:3px}"
+    },
+    {
+      "name": "Photo Tile",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Crew photo with two corners cut at the logo angle.",
+      "html": "<div class=\"ds-dark\"><figure class=\"ds-shot\"><div class=\"ds-ph\"></div></figure></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-dark{background:var(--slate);padding:24px}.ds-shot{margin:0;max-width:240px;background:#26303D;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 12px,100% 100%,22px 100%,0 calc(100% - 12px))}.ds-ph{aspect-ratio:4/5;background:linear-gradient(160deg,#E9E6DF,#B9AE9C)}"
+    },
+    {
+      "name": "Step Marker",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Numbered step: ink block, amber digit, logo-angle cut.",
+      "html": "<div class=\"ds-light\"><ol class=\"ds-steps\"><li><h3>Text Mike</h3><p>Send a few photos of the space and tell him what you're picturing.</p></li></ol></div>",
+      "css": ":host{--slate:#1D2530;--plaster:#ECEDEA;--plaster-2:#DEE1DC;--ink:#1D2530;--ink-soft:#4B5563;--on-slate:#F3F4F2;--on-slate-soft:#AFB8C4;--amber:#F4A21C;--amber-hi:#FFB43A;--focus:#2E6BE6;--line:#7C837C;--rule:#C9CDC7;--danger:#B42318;--focus-ring:rgba(46,107,230,.25);--radius:10px;--font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-light{background:var(--plaster);padding:24px;font-family:var(--font);color:var(--ink)}.ds-steps{list-style:none;margin:0;padding:0;counter-reset:s}.ds-steps li{position:relative;padding-left:62px;counter-increment:s}.ds-steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:44px;height:44px;display:grid;place-items:center;background:var(--ink);color:var(--amber);font-weight:900;font-size:20px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 7px,100% 100%,12px 100%,0 calc(100% - 7px))}.ds-steps h3{margin:0;font-weight:900;text-transform:uppercase;font-size:26px;line-height:1.1;letter-spacing:.01em}.ds-steps p{margin:6px 0 0;color:var(--ink-soft);font-size:17px;line-height:1.55;max-width:44ch}"
+    },
+    {
+      "name": "Eave Strip",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Static approximation of the canvas eave that closes each dark section: shaded course, pewter tabs, drip edge, white gutter.",
+      "html": "<div class=\"ds-eave\"><div class=\"ds-course\"></div><div class=\"ds-drip\"></div><div class=\"ds-gutter\"></div></div>",
+      "css": ".ds-eave{height:64px;background:#ECEDEA;display:flex;flex-direction:column}.ds-course{height:40px;background:linear-gradient(#1A2029 0 22%,transparent 22%),repeating-linear-gradient(90deg,#565F6B 0 30px,#0E1218 30px 31px,#747D89 31px 66px,#0E1218 66px 67px,#5F6874 67px 92px,#0E1218 92px 93px)}.ds-drip{height:2px;background:#B9BEC6}.ds-gutter{height:12px;background:linear-gradient(#F4F5F6,#DADDE2 60%,#AEB4BD)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Fresh Course",
+    "overview": "The page is a roof going on. A dusk-slate sky sits over a tired brown 3-tab roof that an automatic roofer, or the visitor's finger, re-shingles course by course in pewter architectural tabs. Everything else in the system is the trade's other materials: fresh drywall for the light sections, a white aluminium gutter that closes every dark section, and the amber of the MichelArt M as the only warm color. Corners on photos and step markers are cut at the angle of the logo's strokes.\n\nDensity is low and phone-first: one column, big uppercase headlines, wide touch targets (44px minimum, 58px for primary actions), and sections that alternate dark slate and light plaster. Type is heavy and plain, set in the platform's own sans so it reads like a jobsite sign rather than a brochure.\n\nThe system rejects the contractor default of a stock house photo under a trust headline; the only photographs are the crew's own work, and the hero is the roof itself.",
+    "keyCharacteristics": [
+      "Dusk-slate and fresh-plaster grounds alternate; there are no black grounds.",
+      "Amber comes only from the logo and marks the one primary action, the headline accent and small icon accents.",
+      "Blue appears only on form controls, as their hover and focus state.",
+      "Canvas shingles: the hero roof and an eave strip that closes each dark section.",
+      "Corners cut at the logo angle (22px by 12px on photos, 12px by 7px on step markers).",
+      "Heavy uppercase (900) display type at tight leading (0.98)."
+    ],
+    "rules": [
+      {
+        "name": "The Logo Amber Rule",
+        "body": "Amber is the color of the M and nothing else warm appears in the interface. One amber fill per screen region: the primary action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Form-Only Blue Rule",
+        "body": "Blue appears only as the hover/focus edge of form controls. It never fills a button and never appears outside the quote form.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Black Ground Rule",
+        "body": "The darkest ground is dusk slate (#1D2530). Pure or near-black section grounds are out.",
+        "section": "colors"
+      },
+      {
+        "name": "The Shout-or-Speak Rule",
+        "body": "Uppercase comes with weight 800 to 900; sentence case comes with 400 to 700. No light uppercase, no heavy sentence-case paragraphs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Drawn Depth Rule",
+        "body": "Shadows belong to the shingles. Interface surfaces stay flat; only the primary action gets a lift.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do alternate dusk slate (#1D2530) and plaster grounds, and close each dark section that meets a light one with an eave strip.",
+      "Do keep amber to the M's roles: the primary action, one headline word, step digits, icons, the tagline.",
+      "Do keep form-blue (#2E6BE6) to the hover/focus edge of form controls.",
+      "Do set anything that names a thing in 900-weight uppercase at 0.98 leading, and everything that explains in 400-weight sentence case at 17px.",
+      "Do cut photo and marker corners at the logo angle (top-right and bottom-left) instead of rounding them.",
+      "Do keep touch targets at 44px minimum and primary actions at 58px.",
+      "Do let only the arrow respond on service rows.",
+      "Do honor `ROOF.STILL` and prefers-reduced-motion in any new canvas."
+    ],
+    "donts": [
+      "Don't use black or near-black section grounds.",
+      "Don't fill buttons blue or use blue outside the form.",
+      "Don't add a second warm accent beside amber.",
+      "Don't put a stock house photo in the hero; the roof is the hero and the photos are the crew's own.",
+      "Don't add a sticky bottom call bar or repeat the phone number elsewhere on the first screen; it lives top-right.",
+      "Don't highlight a whole service row on hover (no background, shadow or outline on the row).",
+      "Don't add CSS shadows to cards or panels; depth belongs to the shingles.",
+      "Don't set text below 14px, or form text below 16px."
+    ]
+  }
+}
