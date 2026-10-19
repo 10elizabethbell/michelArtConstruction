@@ -75,6 +75,7 @@ h2{font-size:clamp(32px,8.4vw,64px)}
 .phone svg{width:18px;height:18px;color:var(--amber);flex:none}
 @media (hover:hover){.phone:hover{color:var(--amber)}}
 @media (max-width:379px){.top{gap:8px}.brand{gap:8px}.brand img{width:34px}.brand b{font-size:14px;letter-spacing:.04em}.brand small{font-size:11px;letter-spacing:.08em}.phone{font-size:15px;gap:6px}.phone svg{width:16px;height:16px}}
+@media (max-width:339px){.brand small{letter-spacing:.02em}.phone svg{display:none}.brand img{width:30px}}
 
 /* ===== Hero ===== */
 .hero{position:relative;min-height:min(100svh,920px);display:flex;flex-direction:column;
@@ -488,13 +489,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     x.save(); x.beginPath(); x.rect(X, Y, w, h); x.clip();
     x.globalAlpha = isNew ? 0.9 : 0.75;
     x.translate(-((X * 7) % 96), -((Y * 3) % 96));
-    x.fillStyle = x.createPattern(NOISE_L, 'repeat'); x.fillRect(X, Y, w + 96, h + 96);
-    x.fillStyle = x.createPattern(NOISE_D, 'repeat'); x.fillRect(X, Y, w + 96, h + 96);
+    x.fillStyle = x.createPattern(NOISE_L, 'repeat'); x.fillRect(X - 96, Y - 96, w + 192, h + 192);
+    x.fillStyle = x.createPattern(NOISE_D, 'repeat'); x.fillRect(X - 96, Y - 96, w + 192, h + 192);
     x.restore();
     // shadow cast by the course above onto this tab's top
     var g = x.createLinearGradient(0, Y, 0, Y + h * 0.4);
     g.addColorStop(0, isNew ? 'rgba(10,14,20,.6)' : 'rgba(40,30,20,.45)'); g.addColorStop(1, 'rgba(0,0,0,0)');
     x.fillStyle = g; x.fillRect(X, Y, w, h * 0.4);
+    x.fillStyle = isNew ? 'rgba(6,9,14,.75)' : 'rgba(36,27,18,.6)'; x.fillRect(X, Y, w, Math.max(1, h * 0.06));
     // keyway gaps: random widths on new architectural shingles, a regular 3-tab rhythm on the old roof
     if (isNew){ x.fillStyle = 'rgba(14,18,24,.85)'; x.fillRect(X, Y, Math.max(1, w * 0.025), h); }
     else {
@@ -579,6 +581,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       oldC = paintRoof('old'); newC = paintRoof('new');
       trap.shade = ctx.createLinearGradient(0, top * dpr, 0, (top + avail * 0.6) * dpr);
       trap.shade.addColorStop(0, 'rgba(10,14,22,.38)'); trap.shade.addColorStop(1, 'rgba(10,14,22,0)');
+      trap.dusk = ctx.createLinearGradient(0, 0, W * dpr, 0);
+      trap.dusk.addColorStop(0, 'rgba(10,14,22,0)'); trap.dusk.addColorStop(0.55, 'rgba(10,14,22,.06)'); trap.dusk.addColorStop(1, 'rgba(10,14,22,.26)');
       var gy = (H - gutterH + 2) * dpr; trap.gutter = ctx.createLinearGradient(0, gy, 0, H * dpr);
       trap.gutter.addColorStop(0, '#F4F5F6'); trap.gutter.addColorStop(0.6, '#DADDE2'); trap.gutter.addColorStop(1, '#AEB4BD');
       cursor = 0; tearCursor = tabs.length - 1; mode = 'roof'; modeT = 0;
@@ -587,7 +591,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     function trapPath(c, s){
       var t = trap; c.beginPath();
       c.moveTo((t.cx - t.eaveW / 2) * s, t.bottom * s); c.lineTo((t.cx + t.eaveW / 2) * s, t.bottom * s);
-      c.lineTo((t.cx + t.ridgeW / 2) * s, t.top * s); c.lineTo((t.cx - t.ridgeW / 2) * s, t.top * s); c.closePath();
+      c.lineTo((t.cx + t.ridgeW / 2 + 7) * s, (t.top - 6) * s); c.lineTo((t.cx - t.ridgeW / 2 - 7) * s, (t.top - 6) * s); c.closePath();
     }
     function paintRoof(kind){
       var c = document.createElement('canvas'); c.width = cv.width; c.height = cv.height;
@@ -606,21 +610,38 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           }
         }
       }
-      // hip caps along the two sloped edges
-      x.save(); x.lineCap = 'butt';
-      var capCol = kind === 'new' ? 'rgb(64,72,83)' : 'rgb(110,96,78)';
+      // hip and ridge caps: real cap pieces with granules and a dark butt edge, not a flat stroke
+      var capA = kind === 'new' ? NEW_A : OLD_A, capB = kind === 'new' ? NEW_B : OLD_B, CR = rng(kind === 'new' ? 501 : 502);
+      function capPiece(pts){
+        x.save(); x.beginPath(); x.moveTo(pts[0][0] * dpr, pts[0][1] * dpr);
+        for (var q = 1; q < pts.length; q++) x.lineTo(pts[q][0] * dpr, pts[q][1] * dpr);
+        x.closePath(); x.clip();
+        x.fillStyle = mix(capA, capB, 0.15 + CR() * 0.5); x.fillRect(0, 0, c.width, c.height);
+        x.globalAlpha = 0.85; x.fillStyle = x.createPattern(NOISE_L, 'repeat'); x.fillRect(0, 0, c.width, c.height);
+        x.fillStyle = x.createPattern(NOISE_D, 'repeat'); x.fillRect(0, 0, c.width, c.height);
+        x.restore();
+      }
+      var HW = 6;                                   // half width of a cap piece, css px
       [-1, 1].forEach(function(side){
-        var x0 = (trap.cx + side * trap.eaveW / 2), x1 = (trap.cx + side * trap.ridgeW / 2);
-        x.strokeStyle = capCol; x.lineWidth = 7 * dpr;
-        x.beginPath(); x.moveTo(x0 * dpr, trap.bottom * dpr); x.lineTo(x1 * dpr, trap.top * dpr); x.stroke();
-        // cap pieces: a short dark notch every ~12px up the hip
-        x.fillStyle = 'rgba(0,0,0,.35)';
-        var len = Math.hypot(x1 - x0, trap.top - trap.bottom);
-        for (var d = 6; d < len; d += 12){ var f = d / len; x.fillRect((lerp(x0, x1, f) - 3.5) * dpr, lerp(trap.bottom, trap.top, f) * dpr, 7 * dpr, 1.5 * dpr); }
+        var x0 = trap.cx + side * trap.eaveW / 2, x1 = trap.cx + side * trap.ridgeW / 2;
+        var len = Math.hypot(x1 - x0, trap.top - trap.bottom), step = 13;
+        for (var d = 0; d < len; d += step){
+          var fa = d / len, fb = Math.min(1, (d + step) / len);
+          var ax = lerp(x0, x1, fa), ay = lerp(trap.bottom, trap.top, fa), bx = lerp(x0, x1, fb), by = lerp(trap.bottom, trap.top, fb);
+          capPiece([[ax - HW, ay], [ax + HW, ay], [bx + HW, by], [bx - HW, by]]);
+          x.fillStyle = 'rgba(8,10,14,.55)'; x.fillRect((ax - HW) * dpr, (ay - 1.5) * dpr, HW * 2 * dpr, 1.5 * dpr);
+        }
+        // rake shadow: the cap sits proud of the field shingles
+        var g = x.createLinearGradient((x0 - side * HW) * dpr, 0, (x0 - side * (HW + 8)) * dpr, 0);
+        x.save(); x.beginPath(); x.moveTo((x0 - side * HW) * dpr, trap.bottom * dpr); x.lineTo((x1 - side * HW) * dpr, trap.top * dpr);
+        x.lineTo((x1 - side * (HW + 8)) * dpr, trap.top * dpr); x.lineTo((x0 - side * (HW + 8)) * dpr, trap.bottom * dpr); x.closePath();
+        g.addColorStop(0, 'rgba(8,10,14,.45)'); g.addColorStop(1, 'rgba(8,10,14,0)'); x.fillStyle = g; x.fill(); x.restore();
       });
-      // ridge cap
-      x.fillStyle = capCol; x.fillRect((trap.cx - trap.ridgeW / 2) * dpr, (trap.top - 4) * dpr, trap.ridgeW * dpr, 7 * dpr);
-      x.restore();
+      for (var rx = trap.cx - trap.ridgeW / 2 - HW; rx < trap.cx + trap.ridgeW / 2 + HW; rx += 13){
+        capPiece([[rx, trap.top - 5], [rx + 13, trap.top - 5], [rx + 13, trap.top + 5], [rx, trap.top + 5]]);
+        x.fillStyle = 'rgba(8,10,14,.55)'; x.fillRect(rx * dpr, (trap.top - 5) * dpr, 1.5 * dpr, 10 * dpr);
+      }
+      x.fillStyle = 'rgba(8,10,14,.5)'; x.fillRect((trap.cx - trap.ridgeW / 2) * dpr, (trap.top + 5) * dpr, trap.ridgeW * dpr, 2 * dpr);
       return c;
     }
 
@@ -701,8 +722,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           ctx.globalAlpha = 1;
         }
       }
+      // ridge cap follows the top course: new once the roofer reaches it, old after tear-off
+      var topT = tabs[tabs.length - 1], ry = Math.round((trap.top - 6) * dpr), rh = Math.round(13 * dpr);
+      ctx.drawImage(topT && topT.s === 1 && topT.p >= 1 ? newC : oldC, 0, ry, cv.width, rh, 0, ry, cv.width, rh);
       // depth: the plane darkens toward the ridge
       ctx.fillStyle = trap.shade; ctx.fillRect(0, 0, cv.width, cv.height);
+      ctx.fillStyle = trap.dusk; ctx.fillRect(0, 0, cv.width, cv.height);
       ctx.restore();
       // old granules shaken loose
       for (var m = parts.length - 1; m >= 0; m--){

@@ -16,6 +16,7 @@
 ## Positioning
 - Full-scope contractor: "From roofing to full home renovations" (owner's words).
 - Tagline (owner's): "Construction with Certainty". Also: "Quality workmanship from start to finish", "Transform your home into a true work of art".
+- IG reel caption (2025-10-10), verbatim: "From remodeling to full renovations, we turn your ideas into living art." Used as the care line on the page. The caption also offers "a free estimate".
 
 ## Capabilities and constraints
 - Contact: phone +1 (718) 909-8060, "Call or Text Mike" (from the Facebook ad, 2026-10-19). Texts accepted.

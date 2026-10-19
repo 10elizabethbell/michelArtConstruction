@@ -16,6 +16,7 @@
 - **Headline:** their own tagline "Construction with Certainty". Footer tagline: their own "Quality workmanship from start to finish".
 - **"Clear timelines" and "clean job sites"** are the owner's own ad claims; I used them as promises in step 3 ("On the timeline we agreed, with a clean job site"). The brief flags them "verify before publishing" — confirm with Mike.
 - **"Free estimate"** is from the IG caption ("Message or call us right now for a free estimate").
+- **Care line** "We turn your ideas into living art." is verbatim from the same IG caption.
 - **Licensed / insured ($1M/$2M) is NOT on the page** — unverified per the brief. "Licensed" from the IG caption also left off.
 - **Service names** shortened from the brief's verbatim list; detail lines kept verbatim only where the brief had them (roofing, drywall & painting). "Full renovations" comes from "From roofing to full home renovations".
 - **Step 2 copy** ("We look at the job and give you a real quote before any work starts") is inferred from "Ready for a real quote?" + "free estimate".
@@ -37,6 +38,8 @@
 - Does he do new construction / additions? (The reel shows new-house framing and says "houses", "apartments".)
 
 ## Ideas not built (yours to pick)
+- **Desktop dead space** (finish reviewer): the left columns of "What we build" and "Ready for a real quote?" are a heading over empty field at 1024px+. Ideas: a still eave course, a work photo, or Mike's photo once we have one. Left for you since it's a taste call.
+- Photos designed into the world (reviewer's ceiling note): e.g. work photos seen through the roof's dormer windows, or set under an eave.
 - **Runner-up world:** laser level and bubble vial ("Construction with certainty") — an amber laser line across the page the finger drags, a level bubble that settles. Other candidates: blueprint linework drawing itself; setting tile in a walk-in shower; sawdust in a work-light beam; framing lumber with grade stamps.
 - **Impeccable's roll** assigned the framing-lumber world (my #7); I overrode it with the pitch-site rule (best brand + touchable material). Seed key 9bd3f77a if you want to revisit.
 - Before/after slider once Mike sends pairs (roof before/after would be perfect under the roof hero).
