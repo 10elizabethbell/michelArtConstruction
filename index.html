@@ -31,8 +31,12 @@
   --amber-hi:#FFB43A;
   --focus:#2E6BE6;        /* form outline accent (not the amber fill) */
   --gutter:#E6E8EB;
+  --line:#7C837C;          /* form control edges, 3.9:1 on white */
+  --rule:#C9CDC7;
+  --danger:#B42318;
+  --focus-ring:rgba(46,107,230,.25);
   --radius:10px;
-  --pad:clamp(16px,5vw,56px);
+  --pad:max(clamp(16px,5vw,56px),env(safe-area-inset-left),env(safe-area-inset-right));
   --max:1180px;
   --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
@@ -44,6 +48,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-underline-offset:.2em}
 ::selection{background:var(--amber);color:var(--ink)}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.light :focus-visible,.quote :focus-visible{outline-color:var(--ink)}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:.98;margin:0;text-wrap:balance}
 h2{font-size:clamp(32px,8.4vw,64px)}
@@ -56,38 +61,48 @@ h2{font-size:clamp(32px,8.4vw,64px)}
 .btn svg{width:22px;height:22px;flex:none}
 .btn:active{transform:translateY(1px)}
 .btn-primary{background:var(--amber);border-color:var(--amber);color:var(--ink);box-shadow:0 6px 14px -8px rgba(6,10,16,.55)}
-.btn-primary:hover{background:var(--amber-hi);border-color:var(--amber-hi)}
+@media (hover:hover){.btn-primary:hover{background:var(--amber-hi);border-color:var(--amber-hi)}}
 .btn-ghost{background:transparent;border-color:rgba(243,244,242,.6);color:var(--on-slate)}
-.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+@media (hover:hover){.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}}
 
 /* ===== Header ===== */
 .top{position:relative;z-index:3;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px var(--pad) 0;max-width:var(--max);margin:0 auto}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
 .brand img{width:40px;height:auto}
 .brand b{display:block;font-weight:900;font-size:15px;letter-spacing:.06em;line-height:1.05}
-.brand small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.24em;color:var(--on-slate-soft)}
+.brand small{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--on-slate-soft)}
 .phone{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
 .phone svg{width:18px;height:18px;color:var(--amber);flex:none}
-.phone:hover{color:var(--amber)}
+@media (hover:hover){.phone:hover{color:var(--amber)}}
 @media (max-width:379px){.top{gap:8px}.brand{gap:8px}.brand img{width:34px}.brand b{font-size:14px;letter-spacing:.04em}.brand small{font-size:11px;letter-spacing:.08em}.phone{font-size:15px;gap:6px}.phone svg{width:16px;height:16px}}
 
 /* ===== Hero ===== */
 .hero{position:relative;min-height:min(100svh,920px);display:flex;flex-direction:column;
   background:radial-gradient(120% 70% at 50% 100%,#2F3B4B 0%,var(--slate) 62%) var(--slate)}
 .hero-copy{position:relative;z-index:2;padding:clamp(28px,7vw,72px) var(--pad) 0;max-width:var(--max);margin:0 auto;width:100%}
-.hero h1{font-size:clamp(40px,11.4vw,108px);max-width:11ch}
+.hero h1{font-size:clamp(34px,11.4vw,108px);max-width:12ch}
 .hero h1 span{color:var(--amber)}
 .promise{margin:16px 0 0;font-size:clamp(17px,4.6vw,21px);line-height:1.4;max-width:32ch;color:#DCE1E7}
 .actions{display:grid;gap:12px;margin-top:24px}
 .roof{position:relative;flex:1 1 auto;min-height:clamp(210px,38svh,440px);margin-top:18px}
 .roof canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
-.roof .still{position:absolute;inset:0;background:linear-gradient(#2F3B4B00,#2F3B4B00)}
 @media (min-width:640px){
   .actions{grid-template-columns:auto auto;justify-content:start}
 }
 @media (min-width:1024px){
   .hero{min-height:min(100svh,1000px)}
-  .roof{min-height:clamp(300px,42svh,460px)}
+  .hero h1{font-size:clamp(40px,7vw,104px);max-width:none}
+  .promise{max-width:40ch;font-size:22px}
+  .roof{min-height:clamp(300px,44svh,480px)}
+  .brand img{width:52px}.brand b{font-size:18px}.brand small{font-size:12px}
+}
+/* landscape phones: keep the promise and buttons on the first screen */
+@media (orientation:landscape) and (max-height:500px){
+  .hero-copy{padding-top:14px}
+  .hero h1{font-size:clamp(34px,11svh,56px);max-width:none}
+  .promise{margin-top:10px}
+  .actions{grid-template-columns:auto auto;justify-content:start;margin-top:16px}
+  .roof{min-height:150px}
 }
 
 /* ===== Services (drywall) ===== */
@@ -95,16 +110,16 @@ h2{font-size:clamp(32px,8.4vw,64px)}
 .services{padding:clamp(56px,10vw,110px) 0 clamp(56px,9vw,100px)}
 .services h2{margin-bottom:clamp(20px,4vw,36px)}
 .rows{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
-.row{display:flex;align-items:center;gap:16px;min-height:76px;padding:14px 2px;border-bottom:1px solid #C9CDC7;text-decoration:none;color:var(--ink)}
+.row{display:flex;align-items:center;gap:16px;min-height:72px;padding:14px 2px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
 .row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
 .row-name{flex:1;min-width:0}
-.row-name b{display:block;font-weight:900;font-size:clamp(20px,5.4vw,28px);text-transform:uppercase;letter-spacing:-.005em;line-height:1.05}
-.row-name span{display:block;margin-top:4px;font-size:15px;color:var(--ink-soft)}
-.arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--plaster-2);color:var(--ink);transition:background-color .18s ease-out,transform .18s ease-out}
+.row-name b{display:block;font-weight:900;font-size:clamp(20px,5.4vw,28px);text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+.arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#D3D7D0;color:var(--ink);transition:background-color .18s ease-out,transform .18s ease-out}
 .arrow svg{width:18px;height:18px}
-.row:hover .arrow,.row:focus-visible .arrow{background:var(--amber);transform:translateX(3px)}
-.row:focus-visible .arrow{outline:3px solid var(--amber);outline-offset:3px}
-.services-note{margin:18px 0 0;font-size:15px;color:var(--ink-soft)}
+@media (hover:hover){.row:hover .arrow{background:var(--amber);transform:translateX(3px)}}
+.row:focus-visible .arrow,.row:active .arrow{background:var(--amber)}
+.row:focus-visible .arrow{outline:3px solid var(--ink);outline-offset:3px}
+.services-note{margin:18px 0 0;font-size:16px;color:var(--ink-soft)}
 @media (min-width:1024px){
   .services .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
   .services h2{position:sticky;top:40px}
@@ -122,10 +137,10 @@ h2{font-size:clamp(32px,8.4vw,64px)}
 .shot.wide img{aspect-ratio:3/2}
 .more{margin-top:22px;display:grid;gap:12px}
 .btn-fb{background:transparent;border-color:var(--amber);color:var(--amber);min-height:62px;font-size:17px}
-.btn-fb:hover{background:var(--amber);color:var(--ink)}
-.ig{justify-self:center;display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--on-slate-soft);font-weight:700;font-size:15px}
+@media (hover:hover){.btn-fb:hover{background:var(--amber);color:var(--ink)}}
+.ig{justify-self:center;display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--on-slate-soft);font-weight:700;font-size:16px}
 .ig svg{width:18px;height:18px}
-.ig:hover{color:var(--on-slate)}
+@media (hover:hover){.ig:hover{color:var(--on-slate)}}
 .eave{position:relative;height:64px;margin-top:clamp(48px,8vw,80px)}
 .eave canvas{position:absolute;inset:0;width:100%;height:100%}
 @media (min-width:760px){
@@ -142,7 +157,7 @@ h2{font-size:clamp(32px,8.4vw,64px)}
 .steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:44px;height:44px;display:grid;place-items:center;
   background:var(--ink);color:var(--amber);font-weight:900;font-size:20px;
   clip-path:polygon(0 0,calc(100% - 12px) 0,100% 7px,100% 100%,12px 100%,0 calc(100% - 7px))}
-.steps h3{font-size:clamp(21px,5.4vw,26px);line-height:1.1}
+.steps h3{font-size:clamp(21px,5.4vw,26px);line-height:1.1;letter-spacing:.01em}
 .steps p{margin:6px 0 0;color:var(--ink-soft);max-width:44ch}
 .care{margin:clamp(36px,6vw,56px) 0 0;font-size:clamp(20px,5vw,26px);line-height:1.35;font-weight:700;max-width:30ch}
 @media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:40px}}
@@ -152,31 +167,32 @@ h2{font-size:clamp(32px,8.4vw,64px)}
 .quote h2{max-width:12ch}
 .quote .lede{margin:14px 0 0;color:var(--ink-soft);max-width:44ch}
 form{margin-top:28px;display:grid;gap:20px;max-width:640px}
-.field label,.field legend{display:block;font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;padding:0}
+.field label,.field legend{display:block;font-weight:800;font-size:16px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;padding:0}
 .field .opt{font-weight:600;text-transform:none;letter-spacing:0;color:var(--ink-soft)}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 input[type=text],textarea{width:100%;min-height:54px;padding:13px 14px;font:400 17px/1.4 var(--font);color:var(--ink);background:#fff;
-  border:2px solid #B9BFB8;border-radius:var(--radius);transition:border-color .15s ease-out,box-shadow .15s ease-out}
+  border:2px solid var(--line);border-radius:var(--radius);transition:border-color .15s ease-out,box-shadow .15s ease-out}
 textarea{min-height:110px;resize:vertical}
-input[type=text]:hover,textarea:hover{border-color:var(--focus)}
-input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px rgba(46,107,230,.25)}
+@media (hover:hover){input[type=text]:hover,textarea:hover{border-color:var(--focus)}}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px var(--focus-ring)}
 ::placeholder{color:#6B7280}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{position:relative}
 .field .chip{display:block;margin:0;font-size:16px;font-weight:700;letter-spacing:0;text-transform:none}
 .chip input{position:absolute;opacity:0;width:1px;height:1px}
-.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border:2px solid #B9BFB8;border-radius:999px;background:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}
-.chip span:hover{border-color:var(--focus)}
-.chip input:focus-visible+span{border-color:var(--focus);box-shadow:0 0 0 3px rgba(46,107,230,.25)}
+.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border:2px solid var(--line);border-radius:999px;background:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}
+@media (hover:hover){.chip span:hover{border-color:var(--focus)}.chip input:checked+span:hover{border-color:var(--focus)}}
+.chip input:focus-visible+span{border-color:var(--focus);box-shadow:0 0 0 3px var(--focus-ring)}
 .chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
-.chip input:checked+span:hover{border-color:var(--focus)}
-.err{display:none;margin:8px 0 0;color:#B42318;font-weight:700;font-size:15px}
+.err{display:none;margin:8px 0 0;color:var(--danger);font-weight:700;font-size:16px}
 .invalid .err{display:block}
-.invalid input[type=text]{border-color:#B42318}
+.invalid input[type=text],.invalid .chip span{border-color:var(--danger)}
 form .btn{width:100%;border-width:2px}
-form .btn:hover,form .btn:focus-visible{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px rgba(46,107,230,.25)}
-.hint{margin:-8px 0 0;font-size:15px;color:var(--ink-soft)}
-.sent{display:none;max-width:640px;margin-top:22px;padding:18px;border-radius:var(--radius);background:#fff;border:2px solid #B9BFB8}
+form .btn:focus-visible,.sent .btn:focus-visible{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px var(--focus-ring)}
+@media (hover:hover){form .btn:hover,.sent .btn:hover{border-color:var(--focus);box-shadow:0 0 0 3px var(--focus-ring)}}
+.hint{margin:-8px 0 0;font-size:16px;color:var(--ink-soft)}
+.sent .hint{margin:12px 0 0}
+.sent{display:none;max-width:640px;margin-top:22px;padding:18px;border-radius:var(--radius);background:#fff;border:2px solid var(--line)}
 .sent.show{display:block}
 .sent p{margin:0 0 10px}
 .sent pre{white-space:pre-wrap;font:400 16px/1.5 var(--font);margin:0 0 14px;padding:12px;background:var(--plaster);border-radius:8px}
@@ -184,8 +200,8 @@ form .btn:hover,form .btn:focus-visible{outline:none;border-color:var(--focus);b
 .sent .btn{width:auto;min-height:50px;font-size:15px}
 .btn-ink{background:var(--ink);border-color:var(--ink);color:#fff}
 .btn-line{background:#fff;border-color:var(--ink);color:var(--ink)}
-.sent .btn:hover{border-color:var(--focus)}
 @media (min-width:640px){form .btn{width:auto;justify-self:start}}
+@media (min-width:1024px){.quote .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}.quote form{margin-top:0}.quote .sent{grid-column:2}}
 
 /* ===== Footer ===== */
 footer{background:var(--slate);padding:0 0 calc(36px + env(safe-area-inset-bottom))}
@@ -193,11 +209,14 @@ footer{background:var(--slate);padding:0 0 calc(36px + env(safe-area-inset-botto
 .foot-close .name{font-weight:900;text-transform:uppercase;font-size:clamp(28px,7.4vw,52px);line-height:1;letter-spacing:-.005em}
 .foot-close .tag{margin:10px 0 0;color:var(--amber);font-weight:700;font-size:18px}
 .foot-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:6px}
-.foot-list a,.foot-list span{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-slate);text-decoration:none;font-weight:700}
+.foot-list span{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-slate-soft);font-weight:500}
+.foot-list span svg{color:var(--on-slate-soft)}
+.foot-list a{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-slate);text-decoration:none;font-weight:700}
 .foot-list svg{width:20px;height:20px;color:var(--amber);flex:none}
-.foot-list a:hover{color:var(--amber)}
+@media (hover:hover){.foot-list a:hover{color:var(--amber)}}
+footer .eave{margin-top:0}
 .fine{margin:28px 0 0;font-size:14px;color:var(--on-slate-soft)}
-@media (min-width:900px){.foot-close{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}.foot-list{margin:0}}
+@media (min-width:900px){.foot-close{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}.foot-list{margin:0}.foot-list a{white-space:nowrap}}
 </style>
 </head>
 <body>
@@ -221,7 +240,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <header class="hero" id="top">
   <div class="top">
     <a class="brand" href="#top" aria-label="MichelArt Construction, home">
-      <img src="img/logo.webp" width="460" height="380" alt="">
+      <img src="img/logo.webp" width="160" height="132" alt="">
       <span><b>MICHELART</b><small>CONSTRUCTION</small></span>
     </a>
     <a class="phone" href="tel:+17189098060"><svg aria-hidden="true"><use href="#i-phone"/></svg>(718) 909-8060</a>
@@ -245,14 +264,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <h2 id="services-h">What we build</h2>
     <div>
       <ul class="rows">
-        <li><a class="row" data-service="roofing" href="sms:+17189098060"><span class="row-name"><b>Roofing</b><span>Tear-offs, repairs &amp; architectural shingles</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-        <li><a class="row" data-service="a kitchen remodel" href="sms:+17189098060"><span class="row-name"><b>Kitchens</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-        <li><a class="row" data-service="a bathroom remodel" href="sms:+17189098060"><span class="row-name"><b>Bathrooms</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-        <li><a class="row" data-service="tile / a custom walk-in shower" href="sms:+17189098060"><span class="row-name"><b>Tile &amp; walk-in showers</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-        <li><a class="row" data-service="drywall and painting" href="sms:+17189098060"><span class="row-name"><b>Drywall &amp; painting</b><span>Professional prep &amp; finishes</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-        <li><a class="row" data-service="a full home renovation" href="sms:+17189098060"><span class="row-name"><b>Full renovations</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="roofing" data-job="Roofing" href="sms:+17189098060"><span class="row-name"><b>Roofing</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="a kitchen remodel" data-job="Kitchen" href="sms:+17189098060"><span class="row-name"><b>Kitchens</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="a bathroom remodel" data-job="Bathroom" href="sms:+17189098060"><span class="row-name"><b>Bathrooms</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="tile / a custom walk-in shower" data-job="Tile / walk-in shower" href="sms:+17189098060"><span class="row-name"><b>Tile &amp; walk-in showers</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="drywall and painting" data-job="Drywall & painting" href="sms:+17189098060"><span class="row-name"><b>Drywall &amp; painting</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="a full home renovation" data-job="Full renovation" href="sms:+17189098060"><span class="row-name"><b>Full renovations</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
       </ul>
-      <p class="services-note">Tap one to text Mike about it.</p>
+      <p class="services-note">Pick one to text Mike about it.</p>
     </div>
   </div>
 </section>
@@ -261,7 +280,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <h2 id="work-h">Recent work</h2>
     <div class="grid">
-      <figure class="shot big"><img src="img/kitchen.webp" width="720" height="900" alt="White shaker kitchen with quartz counters, a black pendant light and wide-plank floors" draggable="false"></figure>
+      <figure class="shot big"><img src="img/kitchen.webp" width="720" height="900" loading="lazy" decoding="async" alt="White shaker kitchen with quartz counters, a black pendant light and wide-plank floors" draggable="false"></figure>
       <figure class="shot"><img src="img/dining.webp" width="720" height="900" loading="lazy" alt="Dining room with wainscoting, a brass chandelier and a hardwood floor with an inlaid border" draggable="false"></figure>
       <figure class="shot"><img src="img/range.webp" width="720" height="900" loading="lazy" alt="Kitchen corner with white cabinets, a gas range and a stainless hood on a slate-blue wall" draggable="false"></figure>
       <figure class="shot"><img src="img/sink.webp" width="720" height="900" loading="lazy" alt="Kitchen sink wall with a window, white cabinets and a stainless dishwasher" draggable="false"></figure>
@@ -284,19 +303,21 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <li><h3>Free estimate</h3><p>We look at the job and give you a real quote before any work starts.</p></li>
       <li><h3>We build it</h3><p>On the timeline we agreed, with a clean job site, from start to finish.</p></li>
     </ol>
-    <p class="care">It's your home. We work in it the way we'd want a crew working in ours.</p>
+    <p class="care">We turn your ideas into living art.</p>
   </div>
 </section>
 
 <section class="quote" id="quote" aria-labelledby="quote-h">
   <div class="wrap">
-    <h2 id="quote-h">Ready for a real quote?</h2>
-    <p class="lede">Fill this in and it opens a text to Mike, already written. You check it and press send.</p>
+    <div>
+      <h2 id="quote-h">Ready for a real quote?</h2>
+      <p class="lede">Fill this in and it opens a text to Mike, already written. You check it and press send.</p>
+    </div>
     <form id="quoteForm" novalidate>
       <div class="field" id="f-name">
         <label for="q-name">Your name</label>
-        <input type="text" id="q-name" name="name" autocomplete="name" placeholder="First and last name">
-        <p class="err" id="e-name">Add your name so Mike knows who's texting.</p>
+        <input type="text" id="q-name" name="name" autocomplete="name" placeholder="First and last name" aria-describedby="e-name">
+        <p class="err" id="e-name" role="alert">Add your name so Mike knows who's texting.</p>
       </div>
       <div class="field">
         <label for="q-town">Town <span class="opt">(optional)</span></label>
@@ -313,7 +334,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <label class="chip"><input type="checkbox" name="job" value="Full renovation"><span>Full renovation</span></label>
           <label class="chip"><input type="checkbox" name="job" value="Something else"><span>Something else</span></label>
         </div>
-        <p class="err" id="e-job">Pick at least one so Mike knows what it's about.</p>
+        <p class="err" id="e-job" role="alert">Pick at least one so Mike knows what it's about.</p>
       </fieldset>
       <div class="field">
         <label for="q-notes">Anything else <span class="opt">(optional)</span></label>
@@ -328,14 +349,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <a class="btn btn-ink" id="sentOpen" href="sms:+17189098060">Open the text again</a>
         <button class="btn btn-line" type="button" id="sentCopy">Copy message</button>
       </div>
-      <p class="hint" style="margin:12px 0 0">On a computer? Copy it and text it to (718) 909-8060.</p>
+      <p class="hint">On a computer? Copy it and text it to (718) 909-8060.</p>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="eave" aria-hidden="true" style="margin-top:0"><canvas class="eaveCanvas" data-flip="1"></canvas></div>
+  <div class="eave" aria-hidden="true"><canvas class="eaveCanvas" data-flip="1"></canvas></div>
   <div class="wrap foot-close">
     <div>
       <div class="name">MichelArt Construction</div>
@@ -357,8 +378,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var NUM = '+17189098060';
   function sms(body){ return 'sms:' + NUM + '?&body=' + encodeURIComponent(body); }
   document.getElementById('heroText').href = sms("Hi Mike, I found MichelArt Construction online and I'd like a free estimate.");
+  // computers can't send texts: there the rows fill in the quote form instead
+  var desk = window.matchMedia && matchMedia('(hover:hover) and (pointer:fine)').matches;
   document.querySelectorAll('.row[data-service]').forEach(function(a){
-    a.href = sms("Hi Mike, I'd like a free estimate for " + a.dataset.service + ". My town: ");
+    a.href = desk ? '#quote' : sms("Hi Mike, I'd like a free estimate for " + a.dataset.service + ". My town: ");
+    if (desk) a.addEventListener('click', function(){
+      var c = document.querySelector('#quoteForm input[name=job][value="' + a.dataset.job + '"]'); if (c) c.checked = true;
+    });
   });
   document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -370,13 +396,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var jobs = Array.prototype.filter.call(form.querySelectorAll('input[name=job]'), function(c){ return c.checked; }).map(function(c){ return c.value; });
     fName.classList.toggle('invalid', !name);
     fJob.classList.toggle('invalid', !jobs.length);
+    form.name.setAttribute('aria-invalid', !name);
     if (!name) { form.name.focus(); return; }
-    if (!jobs.length) { form.querySelector('input[name=job]').focus(); return; }
+    if (!jobs.length) { fJob.scrollIntoView({ block: 'center' }); form.querySelector('input[name=job]').focus({ preventScroll: true }); return; }
     var msg = 'Hi Mike, this is ' + name + (town ? ' in ' + town : '') + '. I\'d like a free estimate for: ' + jobs.join(', ') + '.' + (notes ? '\n\n' + notes : '');
     var href = sms(msg);
     document.getElementById('sentText').textContent = msg;
     document.getElementById('sentOpen').href = href;
     sent.classList.add('show');
+    sent.setAttribute('tabindex', '-1'); sent.focus({ preventScroll: true }); sent.scrollIntoView({ block: 'nearest' });
     window.location.href = href;
   });
   form.addEventListener('input', function(e){
@@ -396,9 +424,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var ROOF = {
     STILL: false,       // true = draw one finished roof, no motion (older audiences)
     ROWS_PHONE: 14,     // courses on a phone
-    ROWS_DESK: 18,      // courses on desktop
+    ROWS_DESK: 14,      // courses on desktop
     TAB_PHONE: 34,      // tab width at the eave, css px
-    TAB_DESK: 44,
+    TAB_DESK: 56,
     DEPTH: 0.955,       // each course up the roof is this much smaller (perspective)
     HIP: 0.64,          // ridge width as a share of the eave width
     PLACE_MS: 28,       // auto roofer: ms per tab
@@ -443,7 +471,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var isNew = kind === 'new';
     var base = isNew ? mix(NEW_A, NEW_B, r()) : mix(OLD_A, OLD_B, r());
     if (!isNew && t.missing){
-      x.fillStyle = '#3A3128'; x.fillRect(X, Y, w, h);           // felt underlayment
+      x.fillStyle = '#4A3F33'; x.fillRect(X, Y, w, h);           // felt underlayment
       x.fillStyle = 'rgba(200,190,170,.5)';
       for (var n = 0; n < 3; n++) x.fillRect(X + w * (0.2 + n * 0.3), Y + h * 0.35, 1.5, 1.5);
       return;
@@ -467,8 +495,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var g = x.createLinearGradient(0, Y, 0, Y + h * 0.4);
     g.addColorStop(0, isNew ? 'rgba(10,14,20,.6)' : 'rgba(40,30,20,.45)'); g.addColorStop(1, 'rgba(0,0,0,0)');
     x.fillStyle = g; x.fillRect(X, Y, w, h * 0.4);
-    // keyway gap
-    x.fillStyle = isNew ? 'rgba(14,18,24,.85)' : 'rgba(40,32,24,.8)'; x.fillRect(X, Y, Math.max(1, w * 0.025), h);
+    // keyway gaps: random widths on new architectural shingles, a regular 3-tab rhythm on the old roof
+    if (isNew){ x.fillStyle = 'rgba(14,18,24,.85)'; x.fillRect(X, Y, Math.max(1, w * 0.025), h); }
+    else {
+      var w0 = h * 1.9, off = (t.row % 2) * w0 / 2;
+      x.fillStyle = 'rgba(40,32,24,.8)';
+      for (var kx = Math.floor((X - off) / w0) * w0 + off; kx < X + w; kx += w0) if (kx >= X) x.fillRect(kx, Y + h * 0.2, Math.max(1, h * 0.06), h * 0.8);
+    }
     // old roofs: curled corners and moss
     if (!isNew && t.curl){
       x.fillStyle = 'rgba(205,192,168,.55)';
@@ -536,7 +569,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         while (x < end){
           var w = tw * (0.62 + R() * 0.8);
           row.push({ x: x * dpr, y: yTop * dpr, w: w * dpr, h: h * dpr, cx: x + w / 2, cy: yTop + h / 2, row: i,
-            s: still ? 1 : 0, p: 1, from: 0, l: 0, lv: 0, missing: R() < 0.008, curl: R() < 0.16, moss: i < 5 && R() < 0.10, seed: (R() * 1e9) | 0 });
+            s: still ? 1 : 0, p: 1, from: 0, l: 0, lv: 0, missing: R() < 0.004, curl: R() < 0.16, moss: i < 5 && R() < 0.10, seed: (R() * 1e9) | 0 });
           x += w;
         }
         rowsMeta.push({ y: yTop, h: h, n: row.length });
@@ -544,6 +577,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       }
       // the two finished roofs: old and new
       oldC = paintRoof('old'); newC = paintRoof('new');
+      trap.shade = ctx.createLinearGradient(0, top * dpr, 0, (top + avail * 0.6) * dpr);
+      trap.shade.addColorStop(0, 'rgba(10,14,22,.38)'); trap.shade.addColorStop(1, 'rgba(10,14,22,0)');
+      var gy = (H - gutterH + 2) * dpr; trap.gutter = ctx.createLinearGradient(0, gy, 0, H * dpr);
+      trap.gutter.addColorStop(0, '#F4F5F6'); trap.gutter.addColorStop(0.6, '#DADDE2'); trap.gutter.addColorStop(1, '#AEB4BD');
       cursor = 0; tearCursor = tabs.length - 1; mode = 'roof'; modeT = 0;
       return true;
     }
@@ -576,9 +613,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         var x0 = (trap.cx + side * trap.eaveW / 2), x1 = (trap.cx + side * trap.ridgeW / 2);
         x.strokeStyle = capCol; x.lineWidth = 7 * dpr;
         x.beginPath(); x.moveTo(x0 * dpr, trap.bottom * dpr); x.lineTo(x1 * dpr, trap.top * dpr); x.stroke();
-        x.strokeStyle = 'rgba(0,0,0,.35)'; x.lineWidth = 1.5 * dpr; x.setLineDash([3 * dpr, 9 * dpr]);
-        x.beginPath(); x.moveTo((x0 - side * 3) * dpr, trap.bottom * dpr); x.lineTo((x1 - side * 3) * dpr, trap.top * dpr); x.stroke();
-        x.setLineDash([]);
+        // cap pieces: a short dark notch every ~12px up the hip
+        x.fillStyle = 'rgba(0,0,0,.35)';
+        var len = Math.hypot(x1 - x0, trap.top - trap.bottom);
+        for (var d = 6; d < len; d += 12){ var f = d / len; x.fillRect((lerp(x0, x1, f) - 3.5) * dpr, lerp(trap.bottom, trap.top, f) * dpr, 7 * dpr, 1.5 * dpr); }
       });
       // ridge cap
       x.fillStyle = capCol; x.fillRect((trap.cx - trap.ridgeW / 2) * dpr, (trap.top - 4) * dpr, trap.ridgeW * dpr, 7 * dpr);
@@ -587,11 +625,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     }
 
     function place(t, now, delay){ if (t.s === 0 && t.p >= 1){ t.s = 1; t.from = 0; t.p = 0; t.delay = delay || 0; } }
-    function tear(t){ if (t.s === 1 && t.p >= 1){ t.s = 0; t.from = 1; t.p = 0; t.delay = 0; } }
-    function backOut(p){ var c = 1.9; p -= 1; return 1 + (c + 1) * p * p * p + c * p * p; }
+    function tear(t){ if (t.s === 1 && t.p >= 1){ t.s = 0; t.from = 1; t.p = 0; t.delay = 0;
+      if (parts.length < 140 && Math.random() < 0.35) parts.push({ x: t.cx, y: t.cy, vx: (Math.random() - 0.5) * 50, vy: -20 - Math.random() * 30, life: 1 }); } }
+    function backOut(p){ var c = 0.5; p -= 1; return 1 + (c + 1) * p * p * p + c * p * p; }
 
     function frame(dt, now){
-      if (build()) {}
+      build();
       var rect = cv.getBoundingClientRect();     // read every frame: the page scrolls under the finger
       var px = P.x - rect.left, py = P.y - rect.top;
       var inside = px > -ROOF.REACH && px < W + ROOF.REACH && py > -ROOF.REACH && py < H + ROOF.REACH;
@@ -604,13 +643,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       acc += dt * 1000;
       if (mode === 'roof'){
         if (idle){
-          while (acc > ROOF.PLACE_MS){ acc -= ROOF.PLACE_MS;
+          while (acc > ROOF.PLACE_MS){ acc -= ROOF.PLACE_MS * (cursor % 5 === 4 ? 3.2 : 0.7 + Math.random() * 0.4);
             while (cursor < tabs.length && tabs[cursor].s === 1) cursor++;
             if (cursor < tabs.length) place(tabs[cursor++], now);
           }
         } else acc = 0;
         var allNew = true; for (var i = 0; i < tabs.length; i++) if (tabs[i].s === 0){ allNew = false; break; }
-        if (allNew){ mode = 'hold'; modeT = now; }
+        if (allNew){ mode = 'hold'; modeT = now; if (!idle) tabs.forEach(function(t){ t.lv += 14 + (rowsMeta.length - t.row) * 0.8; }); }
       } else if (mode === 'hold'){
         acc = 0;
         if (now - modeT > ROOF.DONE_HOLD && idle){ mode = 'tear'; tearCursor = tabs.length - 1; }
@@ -657,16 +696,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             ctx.globalAlpha = Math.min(1, p * 3);
             ctx.drawImage(newC, sx, sy, sw, sh, sx, sy - (1 - e) * sh * 1.1, sw, sh);
           } else {
-            ctx.globalAlpha = 1 - p;
-            ctx.drawImage(newC, sx, sy, sw, sh, sx, sy + p * p * sh * 1.6, sw, sh);
+            ctx.drawImage(newC, sx, sy, sw, sh, sx, sy + p * p * (trap.bottom * dpr - sy + sh), sw, sh);
           }
           ctx.globalAlpha = 1;
         }
       }
-      // daylight across the plane: brighter toward the eave and the left, softer at the ridge
-      var lg = ctx.createLinearGradient(0, trap.top * dpr, cv.width * 0.35, trap.bottom * dpr);
-      lg.addColorStop(0, 'rgba(10,14,22,.38)'); lg.addColorStop(0.55, 'rgba(255,240,215,.04)'); lg.addColorStop(1, 'rgba(255,244,225,.10)');
-      ctx.fillStyle = lg; ctx.fillRect(0, 0, cv.width, cv.height);
+      // depth: the plane darkens toward the ridge
+      ctx.fillStyle = trap.shade; ctx.fillRect(0, 0, cv.width, cv.height);
       ctx.restore();
       // old granules shaken loose
       for (var m = parts.length - 1; m >= 0; m--){
@@ -678,9 +714,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       // gutter + drip edge
       var gy = (H - trap.gutterH) * dpr, gh = trap.gutterH * dpr;
       ctx.fillStyle = '#B9BEC6'; ctx.fillRect(0, gy, cv.width, 2 * dpr);
-      var gg = ctx.createLinearGradient(0, gy + 2 * dpr, 0, gy + gh);
-      gg.addColorStop(0, '#F4F5F6'); gg.addColorStop(0.6, '#DADDE2'); gg.addColorStop(1, '#AEB4BD');
-      ctx.fillStyle = gg; ctx.fillRect(0, gy + 2 * dpr, cv.width, gh - 2 * dpr);
+      ctx.fillStyle = trap.gutter; ctx.fillRect(0, gy + 2 * dpr, cv.width, gh - 2 * dpr);
     }
 
     ROOF.state = function(){ var f = 0, l = 0; tabs.forEach(function(t){ if (t.s === 1) f++; l = Math.max(l, Math.abs(t.l)); }); return { tabs: tabs.length, fresh: f, lift: +l.toFixed(2), mode: mode, w: W, h: H }; };
