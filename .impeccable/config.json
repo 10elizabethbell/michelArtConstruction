@@ -8,6 +8,15 @@
         "value": "roboto",
         "createdAt": "2026-10-19T11:39:16.440Z",
         "reason": "Ellie's pitch-site house style (ellie-taste.md: system font stack); Roboto is only headless Chrome's system-ui resolution"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T11:46:14.059Z",
+        "reason": "Claude triage: full-bleed section backgrounds whose .wrap child carries clamp(16px,5vw,56px) side padding; the ruled services list's top border is intentional. Verified in captures at 320-1440."
       }
     ]
   }
