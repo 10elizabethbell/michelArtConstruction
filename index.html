@@ -69,7 +69,7 @@ h2{font-size:clamp(32px,8.4vw,64px)}
 .phone{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
 .phone svg{width:18px;height:18px;color:var(--amber);flex:none}
 .phone:hover{color:var(--amber)}
-@media (max-width:379px){.top{gap:8px}.brand{gap:8px}.brand img{width:34px}.brand b{font-size:14px;letter-spacing:.04em}.brand small{font-size:9.5px;letter-spacing:.17em}.phone{font-size:15px;gap:6px}.phone svg{width:16px;height:16px}}
+@media (max-width:379px){.top{gap:8px}.brand{gap:8px}.brand img{width:34px}.brand b{font-size:14px;letter-spacing:.04em}.brand small{font-size:11px;letter-spacing:.08em}.phone{font-size:15px;gap:6px}.phone svg{width:16px;height:16px}}
 
 /* ===== Hero ===== */
 .hero{position:relative;min-height:min(100svh,920px);display:flex;flex-direction:column;
@@ -191,7 +191,7 @@ form .btn:hover,form .btn:focus-visible{outline:none;border-color:var(--focus);b
 footer{background:var(--slate);padding:0 0 calc(36px + env(safe-area-inset-bottom))}
 .foot-close{padding-top:clamp(40px,7vw,64px)}
 .foot-close .name{font-weight:900;text-transform:uppercase;font-size:clamp(28px,7.4vw,52px);line-height:1;letter-spacing:-.005em}
-.foot-close .tag{margin:8px 0 0;color:var(--amber);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:15px}
+.foot-close .tag{margin:10px 0 0;color:var(--amber);font-weight:700;font-size:18px}
 .foot-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:6px}
 .foot-list a,.foot-list span{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-slate);text-decoration:none;font-weight:700}
 .foot-list svg{width:20px;height:20px;color:var(--amber);flex:none}
@@ -683,6 +683,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       ctx.fillStyle = gg; ctx.fillRect(0, gy + 2 * dpr, cv.width, gh - 2 * dpr);
     }
 
+    ROOF.state = function(){ var f = 0, l = 0; tabs.forEach(function(t){ if (t.s === 1) f++; l = Math.max(l, Math.abs(t.l)); }); return { tabs: tabs.length, fresh: f, lift: +l.toFixed(2), mode: mode, w: W, h: H }; };
     var scene = { frame: frame };
     function startRoof(){
       build();
