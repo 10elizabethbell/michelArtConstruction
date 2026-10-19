@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MichelArt Construction · Roofing & Renovations in North Jersey</title>
+<meta name="description" content="MichelArt Construction: roofing, kitchen and bathroom remodeling, tile and walk-in showers, drywall and painting across North Jersey. Call or text Mike for a free estimate.">
+<meta name="theme-color" content="#1D2530">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MichelArt Construction · Construction with certainty">
+<meta property="og:description" content="Roofs through full home renovations across North Jersey. Text Mike for a free estimate.">
+<meta property="og:url" content="https://10elizabethbell.github.io/michelArtConstruction/">
+<meta property="og:image" content="https://10elizabethbell.github.io/michelArtConstruction/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --slate:#1D2530;        /* ground: dusk sky over the roof */
+  --slate-2:#26303D;
+  --slate-3:#323E4D;
+  --plaster:#ECEDEA;      /* fresh drywall */
+  --plaster-2:#DEE1DC;
+  --ink:#1D2530;
+  --ink-soft:#4B5563;
+  --on-slate:#F3F4F2;
+  --on-slate-soft:#AFB8C4;
+  --amber:#F4A21C;        /* the MichelArt M */
+  --amber-hi:#FFB43A;
+  --focus:#2E6BE6;        /* form outline accent (not the amber fill) */
+  --gutter:#E6E8EB;
+  --radius:10px;
+  --pad:clamp(16px,5vw,56px);
+  --max:1180px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--slate);color:var(--on-slate);font:400 17px/1.55 var(--font)}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:.2em}
+::selection{background:var(--amber);color:var(--ink)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:.98;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,8.4vw,64px)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ===== Buttons ===== */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 24px;border-radius:var(--radius);
+  font:800 17px/1 var(--font);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer;
+  transition:background-color .18s ease-out,border-color .18s ease-out,color .18s ease-out,transform .12s ease-out}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--amber);border-color:var(--amber);color:var(--ink);box-shadow:0 6px 14px -8px rgba(6,10,16,.55)}
+.btn-primary:hover{background:var(--amber-hi);border-color:var(--amber-hi)}
+.btn-ghost{background:transparent;border-color:rgba(243,244,242,.6);color:var(--on-slate)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+/* ===== Header ===== */
+.top{position:relative;z-index:3;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px var(--pad) 0;max-width:var(--max);margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.brand img{width:40px;height:auto}
+.brand b{display:block;font-weight:900;font-size:15px;letter-spacing:.06em;line-height:1.05}
+.brand small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.24em;color:var(--on-slate-soft)}
+.phone{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.phone svg{width:18px;height:18px;color:var(--amber);flex:none}
+.phone:hover{color:var(--amber)}
+@media (max-width:379px){.top{gap:8px}.brand{gap:8px}.brand img{width:34px}.brand b{font-size:14px;letter-spacing:.04em}.brand small{font-size:9.5px;letter-spacing:.17em}.phone{font-size:15px;gap:6px}.phone svg{width:16px;height:16px}}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;flex-direction:column;
+  background:radial-gradient(120% 70% at 50% 100%,#2F3B4B 0%,var(--slate) 62%) var(--slate)}
+.hero-copy{position:relative;z-index:2;padding:clamp(28px,7vw,72px) var(--pad) 0;max-width:var(--max);margin:0 auto;width:100%}
+.hero h1{font-size:clamp(40px,11.4vw,108px);max-width:11ch}
+.hero h1 span{color:var(--amber)}
+.promise{margin:16px 0 0;font-size:clamp(17px,4.6vw,21px);line-height:1.4;max-width:32ch;color:#DCE1E7}
+.actions{display:grid;gap:12px;margin-top:24px}
+.roof{position:relative;flex:1 1 auto;min-height:clamp(210px,38svh,440px);margin-top:18px}
+.roof canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.roof .still{position:absolute;inset:0;background:linear-gradient(#2F3B4B00,#2F3B4B00)}
+@media (min-width:640px){
+  .actions{grid-template-columns:auto auto;justify-content:start}
+}
+@media (min-width:1024px){
+  .hero{min-height:min(100svh,1000px)}
+  .roof{min-height:clamp(300px,42svh,460px)}
+}
+
+/* ===== Services (drywall) ===== */
+.light{background:var(--plaster);color:var(--ink)}
+.services{padding:clamp(56px,10vw,110px) 0 clamp(56px,9vw,100px)}
+.services h2{margin-bottom:clamp(20px,4vw,36px)}
+.rows{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.row{display:flex;align-items:center;gap:16px;min-height:76px;padding:14px 2px;border-bottom:1px solid #C9CDC7;text-decoration:none;color:var(--ink)}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.row-name{flex:1;min-width:0}
+.row-name b{display:block;font-weight:900;font-size:clamp(20px,5.4vw,28px);text-transform:uppercase;letter-spacing:-.005em;line-height:1.05}
+.row-name span{display:block;margin-top:4px;font-size:15px;color:var(--ink-soft)}
+.arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--plaster-2);color:var(--ink);transition:background-color .18s ease-out,transform .18s ease-out}
+.arrow svg{width:18px;height:18px}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--amber);transform:translateX(3px)}
+.row:focus-visible .arrow{outline:3px solid var(--amber);outline-offset:3px}
+.services-note{margin:18px 0 0;font-size:15px;color:var(--ink-soft)}
+@media (min-width:1024px){
+  .services .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .services h2{position:sticky;top:40px}
+}
+
+/* ===== Work (slate) ===== */
+.work{position:relative;padding:clamp(56px,10vw,110px) 0 0;background:var(--slate)}
+.work h2{margin-bottom:clamp(20px,4vw,36px)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.shot{margin:0;position:relative;background:var(--slate-2);
+  /* corners cut at the angle of the MichelArt M */
+  clip-path:polygon(0 0,calc(100% - 22px) 0,100% 12px,100% 100%,22px 100%,0 calc(100% - 12px))}
+.shot img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;-webkit-user-drag:none}
+.shot.big{grid-column:span 2}
+.shot.wide img{aspect-ratio:3/2}
+.more{margin-top:22px;display:grid;gap:12px}
+.btn-fb{background:transparent;border-color:var(--amber);color:var(--amber);min-height:62px;font-size:17px}
+.btn-fb:hover{background:var(--amber);color:var(--ink)}
+.ig{justify-self:center;display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--on-slate-soft);font-weight:700;font-size:15px}
+.ig svg{width:18px;height:18px}
+.ig:hover{color:var(--on-slate)}
+.eave{position:relative;height:64px;margin-top:clamp(48px,8vw,80px)}
+.eave canvas{position:absolute;inset:0;width:100%;height:100%}
+@media (min-width:760px){
+  .grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .shot.big{grid-column:auto}
+  .shot.wide img{aspect-ratio:4/5}
+  .more{grid-template-columns:auto auto;justify-content:start;align-items:center;gap:24px}
+}
+
+/* ===== How it goes ===== */
+.steps-sec{padding:clamp(56px,10vw,110px) 0}
+.steps{list-style:none;margin:clamp(20px,4vw,36px) 0 0;padding:0;display:grid;gap:28px;counter-reset:s}
+.steps li{position:relative;padding-left:62px;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:44px;height:44px;display:grid;place-items:center;
+  background:var(--ink);color:var(--amber);font-weight:900;font-size:20px;
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 7px,100% 100%,12px 100%,0 calc(100% - 7px))}
+.steps h3{font-size:clamp(21px,5.4vw,26px);line-height:1.1}
+.steps p{margin:6px 0 0;color:var(--ink-soft);max-width:44ch}
+.care{margin:clamp(36px,6vw,56px) 0 0;font-size:clamp(20px,5vw,26px);line-height:1.35;font-weight:700;max-width:30ch}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:40px}}
+
+/* ===== Quote form ===== */
+.quote{padding:clamp(56px,10vw,110px) 0;background:var(--plaster-2);color:var(--ink)}
+.quote h2{max-width:12ch}
+.quote .lede{margin:14px 0 0;color:var(--ink-soft);max-width:44ch}
+form{margin-top:28px;display:grid;gap:20px;max-width:640px}
+.field label,.field legend{display:block;font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;padding:0}
+.field .opt{font-weight:600;text-transform:none;letter-spacing:0;color:var(--ink-soft)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],textarea{width:100%;min-height:54px;padding:13px 14px;font:400 17px/1.4 var(--font);color:var(--ink);background:#fff;
+  border:2px solid #B9BFB8;border-radius:var(--radius);transition:border-color .15s ease-out,box-shadow .15s ease-out}
+textarea{min-height:110px;resize:vertical}
+input[type=text]:hover,textarea:hover{border-color:var(--focus)}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px rgba(46,107,230,.25)}
+::placeholder{color:#6B7280}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.field .chip{display:block;margin:0;font-size:16px;font-weight:700;letter-spacing:0;text-transform:none}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border:2px solid #B9BFB8;border-radius:999px;background:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}
+.chip span:hover{border-color:var(--focus)}
+.chip input:focus-visible+span{border-color:var(--focus);box-shadow:0 0 0 3px rgba(46,107,230,.25)}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip input:checked+span:hover{border-color:var(--focus)}
+.err{display:none;margin:8px 0 0;color:#B42318;font-weight:700;font-size:15px}
+.invalid .err{display:block}
+.invalid input[type=text]{border-color:#B42318}
+form .btn{width:100%;border-width:2px}
+form .btn:hover,form .btn:focus-visible{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px rgba(46,107,230,.25)}
+.hint{margin:-8px 0 0;font-size:15px;color:var(--ink-soft)}
+.sent{display:none;max-width:640px;margin-top:22px;padding:18px;border-radius:var(--radius);background:#fff;border:2px solid #B9BFB8}
+.sent.show{display:block}
+.sent p{margin:0 0 10px}
+.sent pre{white-space:pre-wrap;font:400 16px/1.5 var(--font);margin:0 0 14px;padding:12px;background:var(--plaster);border-radius:8px}
+.sent .row2{display:flex;flex-wrap:wrap;gap:10px}
+.sent .btn{width:auto;min-height:50px;font-size:15px}
+.btn-ink{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn-line{background:#fff;border-color:var(--ink);color:var(--ink)}
+.sent .btn:hover{border-color:var(--focus)}
+@media (min-width:640px){form .btn{width:auto;justify-self:start}}
+
+/* ===== Footer ===== */
+footer{background:var(--slate);padding:0 0 calc(36px + env(safe-area-inset-bottom))}
+.foot-close{padding-top:clamp(40px,7vw,64px)}
+.foot-close .name{font-weight:900;text-transform:uppercase;font-size:clamp(28px,7.4vw,52px);line-height:1;letter-spacing:-.005em}
+.foot-close .tag{margin:8px 0 0;color:var(--amber);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:15px}
+.foot-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:6px}
+.foot-list a,.foot-list span{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-slate);text-decoration:none;font-weight:700}
+.foot-list svg{width:20px;height:20px;color:var(--amber);flex:none}
+.foot-list a:hover{color:var(--amber)}
+.fine{margin:28px 0 0;font-size:14px;color:var(--on-slate-soft)}
+@media (min-width:900px){.foot-close{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}.foot-list{margin:0}}
+</style>
+</head>
+<body>
+<!--
+THESIS: The roof is the hero. The visitor re-shingles a tired North Jersey roof with a finger, course by course, and the page roofs itself until touched. Refuses the contractor default of a stock house photo under "Quality you can trust".
+OWN-WORLD: Dusk-slate sky (#1D2530); pewter architectural shingles over a tan, algae-streaked old roof; amber only from the MichelArt M; fresh-drywall sections; a white gutter eave closes each dark section; corners cut at the angle of the logo's strokes; heavy uppercase system sans.
+STORY: Mike's crew does everything from roofs to full remodels → real rooms from their own reel prove it → text Mike for a real quote.
+FIRST VIEWPORT: Phone: M logo left, (718) 909-8060 top-right; CONSTRUCTION WITH CERTAINTY at ~11vw; one promise line; amber Text Mike + outlined free-estimate buttons; the roof fills the rest down to a white gutter, roofing itself.
+FORM: Roof-shingle world, #1 of 7 (pitch-site rule). Seed 9bd3f77a assigned #7 (framing lumber); noted in HANDOFF.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4" fill="currentColor"/></symbol>
+</svg>
+
+<header class="hero" id="top">
+  <div class="top">
+    <a class="brand" href="#top" aria-label="MichelArt Construction, home">
+      <img src="img/logo.webp" width="460" height="380" alt="">
+      <span><b>MICHELART</b><small>CONSTRUCTION</small></span>
+    </a>
+    <a class="phone" href="tel:+17189098060"><svg aria-hidden="true"><use href="#i-phone"/></svg>(718) 909-8060</a>
+  </div>
+  <div class="hero-copy">
+    <h1>Construction with <span>certainty.</span></h1>
+    <p class="promise">From the roof to the remodel, we treat your North Jersey home like it's our own.</p>
+    <div class="actions">
+      <a class="btn btn-primary" id="heroText" href="sms:+17189098060"><svg aria-hidden="true"><use href="#i-text"/></svg>Text Mike</a>
+      <a class="btn btn-ghost" href="#quote">Get a free estimate</a>
+    </div>
+  </div>
+  <div class="roof" id="roof" aria-hidden="true">
+    <canvas id="roofCanvas"></canvas>
+  </div>
+</header>
+
+<main>
+<section class="services light" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <h2 id="services-h">What we build</h2>
+    <div>
+      <ul class="rows">
+        <li><a class="row" data-service="roofing" href="sms:+17189098060"><span class="row-name"><b>Roofing</b><span>Tear-offs, repairs &amp; architectural shingles</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="a kitchen remodel" href="sms:+17189098060"><span class="row-name"><b>Kitchens</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="a bathroom remodel" href="sms:+17189098060"><span class="row-name"><b>Bathrooms</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="tile / a custom walk-in shower" href="sms:+17189098060"><span class="row-name"><b>Tile &amp; walk-in showers</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="drywall and painting" href="sms:+17189098060"><span class="row-name"><b>Drywall &amp; painting</b><span>Professional prep &amp; finishes</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="row" data-service="a full home renovation" href="sms:+17189098060"><span class="row-name"><b>Full renovations</b></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      </ul>
+      <p class="services-note">Tap one to text Mike about it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h">Recent work</h2>
+    <div class="grid">
+      <figure class="shot big"><img src="img/kitchen.webp" width="720" height="900" alt="White shaker kitchen with quartz counters, a black pendant light and wide-plank floors" draggable="false"></figure>
+      <figure class="shot"><img src="img/dining.webp" width="720" height="900" loading="lazy" alt="Dining room with wainscoting, a brass chandelier and a hardwood floor with an inlaid border" draggable="false"></figure>
+      <figure class="shot"><img src="img/range.webp" width="720" height="900" loading="lazy" alt="Kitchen corner with white cabinets, a gas range and a stainless hood on a slate-blue wall" draggable="false"></figure>
+      <figure class="shot"><img src="img/sink.webp" width="720" height="900" loading="lazy" alt="Kitchen sink wall with a window, white cabinets and a stainless dishwasher" draggable="false"></figure>
+      <figure class="shot"><img src="img/exterior.webp" width="720" height="900" loading="lazy" alt="House with a dark stacked-stone front, a white door and a black iron porch railing" draggable="false"></figure>
+      <figure class="shot big wide"><picture><source media="(min-width:760px)" srcset="img/framing.webp"><img src="img/framing-wide.webp" width="900" height="600" loading="lazy" alt="New house framing going up on a fresh foundation" draggable="false"></picture></figure>
+    </div>
+    <div class="more">
+      <a class="btn btn-fb" href="https://www.facebook.com/profile.php?id=61552194303609" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>See more of our work</a>
+      <a class="ig" href="https://www.instagram.com/michelart_construction/" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Also on Instagram</a>
+    </div>
+  </div>
+  <div class="eave" aria-hidden="true"><canvas class="eaveCanvas"></canvas></div>
+</section>
+
+<section class="steps-sec light" aria-labelledby="steps-h">
+  <div class="wrap">
+    <h2 id="steps-h">How a job goes</h2>
+    <ol class="steps">
+      <li><h3>Text Mike</h3><p>Send a few photos of the space and tell him what you're picturing.</p></li>
+      <li><h3>Free estimate</h3><p>We look at the job and give you a real quote before any work starts.</p></li>
+      <li><h3>We build it</h3><p>On the timeline we agreed, with a clean job site, from start to finish.</p></li>
+    </ol>
+    <p class="care">It's your home. We work in it the way we'd want a crew working in ours.</p>
+  </div>
+</section>
+
+<section class="quote" id="quote" aria-labelledby="quote-h">
+  <div class="wrap">
+    <h2 id="quote-h">Ready for a real quote?</h2>
+    <p class="lede">Fill this in and it opens a text to Mike, already written. You check it and press send.</p>
+    <form id="quoteForm" novalidate>
+      <div class="field" id="f-name">
+        <label for="q-name">Your name</label>
+        <input type="text" id="q-name" name="name" autocomplete="name" placeholder="First and last name">
+        <p class="err" id="e-name">Add your name so Mike knows who's texting.</p>
+      </div>
+      <div class="field">
+        <label for="q-town">Town <span class="opt">(optional)</span></label>
+        <input type="text" id="q-town" name="town" autocomplete="address-level2" placeholder="Where's the house?">
+      </div>
+      <fieldset class="field" id="f-job">
+        <legend>What's the job?</legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="job" value="Roofing"><span>Roofing</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="Kitchen"><span>Kitchen</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="Bathroom"><span>Bathroom</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="Tile / walk-in shower"><span>Tile / shower</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="Drywall & painting"><span>Drywall &amp; paint</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="Full renovation"><span>Full renovation</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="Something else"><span>Something else</span></label>
+        </div>
+        <p class="err" id="e-job">Pick at least one so Mike knows what it's about.</p>
+      </fieldset>
+      <div class="field">
+        <label for="q-notes">Anything else <span class="opt">(optional)</span></label>
+        <textarea id="q-notes" name="notes" placeholder="Size of the room, what's there now, when you'd like it done"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-text"/></svg>Text this to Mike</button>
+    </form>
+    <div class="sent" id="sent" aria-live="polite">
+      <p><b>Your messages app should open with this:</b></p>
+      <pre id="sentText"></pre>
+      <div class="row2">
+        <a class="btn btn-ink" id="sentOpen" href="sms:+17189098060">Open the text again</a>
+        <button class="btn btn-line" type="button" id="sentCopy">Copy message</button>
+      </div>
+      <p class="hint" style="margin:12px 0 0">On a computer? Copy it and text it to (718) 909-8060.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="eave" aria-hidden="true" style="margin-top:0"><canvas class="eaveCanvas" data-flip="1"></canvas></div>
+  <div class="wrap foot-close">
+    <div>
+      <div class="name">MichelArt Construction</div>
+      <p class="tag">Quality workmanship from start to finish</p>
+    </div>
+    <ul class="foot-list">
+      <li><a href="tel:+17189098060"><svg aria-hidden="true"><use href="#i-phone"/></svg>(718) 909-8060 · Call or text Mike</a></li>
+      <li><span><svg aria-hidden="true"><use href="#i-pin"/></svg>Serving North Jersey</span></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61552194303609" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a></li>
+      <li><a href="https://www.instagram.com/michelart_construction/" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a></li>
+    </ul>
+  </div>
+  <div class="wrap"><p class="fine">© <span id="yr">2026</span> MichelArt Construction LLC</p></div>
+</footer>
+
+<script>
+/* ===== Contact wiring ===== */
+(function(){
+  var NUM = '+17189098060';
+  function sms(body){ return 'sms:' + NUM + '?&body=' + encodeURIComponent(body); }
+  document.getElementById('heroText').href = sms("Hi Mike, I found MichelArt Construction online and I'd like a free estimate.");
+  document.querySelectorAll('.row[data-service]').forEach(function(a){
+    a.href = sms("Hi Mike, I'd like a free estimate for " + a.dataset.service + ". My town: ");
+  });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var form = document.getElementById('quoteForm'), sent = document.getElementById('sent');
+  var fName = document.getElementById('f-name'), fJob = document.getElementById('f-job');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.name.value.trim(), town = form.town.value.trim(), notes = form.notes.value.trim();
+    var jobs = Array.prototype.filter.call(form.querySelectorAll('input[name=job]'), function(c){ return c.checked; }).map(function(c){ return c.value; });
+    fName.classList.toggle('invalid', !name);
+    fJob.classList.toggle('invalid', !jobs.length);
+    if (!name) { form.name.focus(); return; }
+    if (!jobs.length) { form.querySelector('input[name=job]').focus(); return; }
+    var msg = 'Hi Mike, this is ' + name + (town ? ' in ' + town : '') + '. I\'d like a free estimate for: ' + jobs.join(', ') + '.' + (notes ? '\n\n' + notes : '');
+    var href = sms(msg);
+    document.getElementById('sentText').textContent = msg;
+    document.getElementById('sentOpen').href = href;
+    sent.classList.add('show');
+    window.location.href = href;
+  });
+  form.addEventListener('input', function(e){
+    if (e.target.name === 'name' && e.target.value.trim()) fName.classList.remove('invalid');
+    if (e.target.name === 'job') fJob.classList.remove('invalid');
+  });
+  document.getElementById('sentCopy').addEventListener('click', function(){
+    var b = this, t = document.getElementById('sentText').textContent;
+    function done(ok){ b.textContent = ok ? 'Copied' : 'Select the text above to copy'; setTimeout(function(){ b.textContent = 'Copy message'; }, 2200); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function(){ done(true); }, function(){ done(false); });
+    else done(false);
+  });
+})();
+
+/* ===== Shingles: shared painter + animation loop ===== */
+(function(){
+  var ROOF = {
+    STILL: false,       // true = draw one finished roof, no motion (older audiences)
+    ROWS_PHONE: 14,     // courses on a phone
+    ROWS_DESK: 18,      // courses on desktop
+    TAB_PHONE: 34,      // tab width at the eave, css px
+    TAB_DESK: 44,
+    DEPTH: 0.955,       // each course up the roof is this much smaller (perspective)
+    HIP: 0.64,          // ridge width as a share of the eave width
+    PLACE_MS: 28,       // auto roofer: ms per tab
+    TEAR_MS: 7,         // tear-off: ms per tab
+    REACH: 58,          // finger radius that re-shingles, css px
+    IDLE_RESUME: 2600,  // ms after last touch before the roofer carries on
+    DONE_HOLD: 5200,    // finished roof holds this long before the next tear-off
+    LIFT: 9,            // max tab lift from the pointer, px
+    STIFF: 70, DAMP: 9, // spring back with a small wobble
+    WIND: 1.6,          // gust flutter, px
+    DPR_MAX: 1.5
+  };
+  window.ROOF = ROOF;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var still = ROOF.STILL || reduce;
+
+  // seeded random so a roof looks the same between rebuilds of the same size
+  function rng(seed){ return function(){ seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }; }
+  function lerp(a,b,t){ return a + (b - a) * t; }
+  function mix(c1,c2,t){ return 'rgb(' + Math.round(lerp(c1[0],c2[0],t)) + ',' + Math.round(lerp(c1[1],c2[1],t)) + ',' + Math.round(lerp(c1[2],c2[2],t)) + ')'; }
+
+  // granule noise: two tiles (light and dark specks), drawn once
+  function noiseTile(light){
+    var c = document.createElement('canvas'); c.width = c.height = 96;
+    var x = c.getContext('2d'), r = rng(light ? 7 : 11);
+    for (var i = 0; i < 1500; i++){
+      var a = 0.10 + r() * 0.28;
+      x.fillStyle = light ? 'rgba(255,255,255,' + a + ')' : 'rgba(0,0,0,' + (a + 0.08) + ')';
+      var s = r() < 0.8 ? 1 : 1.6;
+      x.fillRect(r() * 96, r() * 96, s, s);
+    }
+    return c;
+  }
+  var NOISE_L = noiseTile(true), NOISE_D = noiseTile(false);
+
+  var NEW_A = [86,95,107], NEW_B = [116,125,137], NEW_SH = [44,51,60];      // pewter architectural
+  var OLD_A = [128,113,92], OLD_B = [158,143,118], OLD_SH = [84,72,58];     // tired 3-tab brown
+
+  // paint one tab into ctx (device pixels already scaled)
+  function paintTab(x, t, kind, r){
+    var w = t.w, h = t.h, X = t.x, Y = t.y;
+    var isNew = kind === 'new';
+    var base = isNew ? mix(NEW_A, NEW_B, r()) : mix(OLD_A, OLD_B, r());
+    if (!isNew && t.missing){
+      x.fillStyle = '#3A3128'; x.fillRect(X, Y, w, h);           // felt underlayment
+      x.fillStyle = 'rgba(200,190,170,.5)';
+      for (var n = 0; n < 3; n++) x.fillRect(X + w * (0.2 + n * 0.3), Y + h * 0.35, 1.5, 1.5);
+      return;
+    }
+    x.fillStyle = base; x.fillRect(X, Y, w, h);
+    // laminated dimension: a darker lower layer on some tabs
+    if (isNew){
+      var band = h * (0.28 + r() * 0.2);
+      if (r() < 0.62){ x.fillStyle = mix(NEW_SH, NEW_A, 0.35 + r() * 0.3); x.fillRect(X, Y + h - band, w, band); }
+    } else if (r() < 0.25){
+      x.fillStyle = 'rgba(70,60,48,.35)'; x.fillRect(X, Y + h * 0.55, w, h * 0.45);
+    }
+    // granules
+    x.save(); x.beginPath(); x.rect(X, Y, w, h); x.clip();
+    x.globalAlpha = isNew ? 0.9 : 0.75;
+    x.translate(-((X * 7) % 96), -((Y * 3) % 96));
+    x.fillStyle = x.createPattern(NOISE_L, 'repeat'); x.fillRect(X, Y, w + 96, h + 96);
+    x.fillStyle = x.createPattern(NOISE_D, 'repeat'); x.fillRect(X, Y, w + 96, h + 96);
+    x.restore();
+    // shadow cast by the course above onto this tab's top
+    var g = x.createLinearGradient(0, Y, 0, Y + h * 0.4);
+    g.addColorStop(0, isNew ? 'rgba(10,14,20,.6)' : 'rgba(40,30,20,.45)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    x.fillStyle = g; x.fillRect(X, Y, w, h * 0.4);
+    // keyway gap
+    x.fillStyle = isNew ? 'rgba(14,18,24,.85)' : 'rgba(40,32,24,.8)'; x.fillRect(X, Y, Math.max(1, w * 0.025), h);
+    // old roofs: curled corners and moss
+    if (!isNew && t.curl){
+      x.fillStyle = 'rgba(205,192,168,.55)';
+      x.beginPath(); x.moveTo(X + w, Y + h); x.lineTo(X + w - w * 0.3, Y + h); x.lineTo(X + w, Y + h - h * 0.45); x.closePath(); x.fill();
+    }
+    if (!isNew && t.moss){
+      x.fillStyle = 'rgba(78,96,46,.55)';
+      for (var m = 0; m < 6; m++){ x.beginPath(); x.ellipse(X + r() * w, Y + h * (0.5 + r() * 0.5), 2 + r() * 5, 1.5 + r() * 3, 0, 0, 6.283); x.fill(); }
+    }
+  }
+
+  /* ---- shared loop: every scene registers update(dt, now) and a visible flag ---- */
+  var scenes = [], running = false, last = 0;
+  function loop(now){
+    var dt = Math.min(0.05, (now - last) / 1000 || 0.016); last = now;
+    var any = false;
+    for (var i = 0; i < scenes.length; i++){ if (scenes[i].visible){ scenes[i].frame(dt, now); any = true; } }
+    if (any) requestAnimationFrame(loop); else running = false;
+  }
+  function wake(){ if (!running && !still){ running = true; last = performance.now(); requestAnimationFrame(loop); } }
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){ e.target._scene.visible = e.isIntersecting; }); wake();
+  }) : null;
+  function register(el, scene){ el._scene = scene; scene.visible = true; scenes.push(scene); if (io) io.observe(el); wake(); }
+
+  /* ---- pointer, shared ---- */
+  var P = { x: -9999, y: -9999, vx: 0, vy: 0, down: false, t: 0, active: false };
+  function setP(cx, cy){
+    var now = performance.now(), dtp = Math.max(8, now - P.t);
+    if (P.t && P.x > -9000){ P.vx = (cx - P.x) / dtp * 16; P.vy = (cy - P.y) / dtp * 16; }
+    P.x = cx; P.y = cy; P.t = now; wake();
+  }
+  window.addEventListener('pointermove', function(e){ if (e.pointerType === 'mouse') setP(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchstart', function(e){ var t = e.touches[0]; P.t = 0; P.x = -9999; setP(t.clientX, t.clientY); P.down = true; }, { passive: true });
+  window.addEventListener('touchmove', function(e){ var t = e.touches[0]; setP(t.clientX, t.clientY); }, { passive: true });
+  window.addEventListener('touchend', function(){ P.down = false; P.x = P.y = -9999; }, { passive: true });
+  document.addEventListener('mouseleave', function(){ P.x = P.y = -9999; });
+
+  /* ================= Hero roof ================= */
+  var cv = document.getElementById('roofCanvas'), wrap = document.getElementById('roof');
+  if (cv){
+    var ctx = cv.getContext('2d');
+    var W = 0, H = 0, dpr = 1, tabs = [], rowsMeta = [], oldC, newC, trap;
+    var mode = 'roof', modeT = 0, cursor = 0, tearCursor = 0, lastTouch = -1e9, acc = 0, parts = [];
+
+    function build(){
+      var r = wrap.getBoundingClientRect();
+      var nw = Math.round(r.width), nh = Math.round(r.height);
+      if (nw === W && nh === H) return false;      // address-bar resizes don't wipe the roof
+      W = nw; H = nh; dpr = Math.min(window.devicePixelRatio || 1, still ? 3 : ROOF.DPR_MAX);
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      var phone = W < 760, N = phone ? ROOF.ROWS_PHONE : ROOF.ROWS_DESK, k = ROOF.DEPTH;
+      var gutterH = phone ? 12 : 16, top = Math.max(6, H * 0.04), avail = H - gutterH - top;
+      var h0 = avail * (1 - k) / (1 - Math.pow(k, N));
+      var eaveW = W * 1.12, cx = W / 2;
+      trap = { top: top, bottom: H - gutterH, eaveW: eaveW, ridgeW: eaveW * ROOF.HIP, cx: cx, gutterH: gutterH };
+      tabs = []; rowsMeta = [];
+      var R = rng(1234 + N), y = H - gutterH;
+      for (var i = 0; i < N; i++){
+        var h = h0 * Math.pow(k, i), yTop = y - h;
+        var f = (H - gutterH - (yTop + h / 2)) / avail;           // 0 at eave, 1 at ridge
+        var rowW = lerp(eaveW, eaveW * ROOF.HIP, f) + h * 2;
+        var tw = (phone ? ROOF.TAB_PHONE : ROOF.TAB_DESK) * Math.pow(k, i) * (i === N - 1 ? 0.55 : 1);
+        var x = cx - rowW / 2 - R() * tw, end = cx + rowW / 2, row = [];
+        while (x < end){
+          var w = tw * (0.62 + R() * 0.8);
+          row.push({ x: x * dpr, y: yTop * dpr, w: w * dpr, h: h * dpr, cx: x + w / 2, cy: yTop + h / 2, row: i,
+            s: still ? 1 : 0, p: 1, from: 0, l: 0, lv: 0, missing: R() < 0.008, curl: R() < 0.16, moss: i < 5 && R() < 0.10, seed: (R() * 1e9) | 0 });
+          x += w;
+        }
+        rowsMeta.push({ y: yTop, h: h, n: row.length });
+        tabs = tabs.concat(row); y = yTop;
+      }
+      // the two finished roofs: old and new
+      oldC = paintRoof('old'); newC = paintRoof('new');
+      cursor = 0; tearCursor = tabs.length - 1; mode = 'roof'; modeT = 0;
+      return true;
+    }
+    function trapPath(c, s){
+      var t = trap; c.beginPath();
+      c.moveTo((t.cx - t.eaveW / 2) * s, t.bottom * s); c.lineTo((t.cx + t.eaveW / 2) * s, t.bottom * s);
+      c.lineTo((t.cx + t.ridgeW / 2) * s, t.top * s); c.lineTo((t.cx - t.ridgeW / 2) * s, t.top * s); c.closePath();
+    }
+    function paintRoof(kind){
+      var c = document.createElement('canvas'); c.width = cv.width; c.height = cv.height;
+      var x = c.getContext('2d');
+      tabs.forEach(function(t){ paintTab(x, t, kind, rng(t.seed + (kind === 'new' ? 99 : 0))); });
+      if (kind === 'old'){
+        // black algae streaks running down from the ridge: organic, wobbling width
+        var R = rng(77), n = Math.round(W / 70);
+        for (var s = 0; s < n; s++){
+          var sx = R() * W, sw = 8 + R() * 30, yy = trap.top + R() * (trap.bottom - trap.top) * 0.4, a = 0.12 + R() * 0.16;
+          while (yy < trap.bottom){
+            var step = 4 + R() * 6; sw = Math.max(4, sw + (R() - 0.5) * 6); sx += (R() - 0.5) * 2;
+            x.fillStyle = 'rgba(28,28,24,' + a.toFixed(3) + ')';
+            x.fillRect((sx - sw / 2) * dpr, yy * dpr, sw * dpr, step * dpr);
+            yy += step; a *= 0.995;
+          }
+        }
+      }
+      // hip caps along the two sloped edges
+      x.save(); x.lineCap = 'butt';
+      var capCol = kind === 'new' ? 'rgb(64,72,83)' : 'rgb(110,96,78)';
+      [-1, 1].forEach(function(side){
+        var x0 = (trap.cx + side * trap.eaveW / 2), x1 = (trap.cx + side * trap.ridgeW / 2);
+        x.strokeStyle = capCol; x.lineWidth = 7 * dpr;
+        x.beginPath(); x.moveTo(x0 * dpr, trap.bottom * dpr); x.lineTo(x1 * dpr, trap.top * dpr); x.stroke();
+        x.strokeStyle = 'rgba(0,0,0,.35)'; x.lineWidth = 1.5 * dpr; x.setLineDash([3 * dpr, 9 * dpr]);
+        x.beginPath(); x.moveTo((x0 - side * 3) * dpr, trap.bottom * dpr); x.lineTo((x1 - side * 3) * dpr, trap.top * dpr); x.stroke();
+        x.setLineDash([]);
+      });
+      // ridge cap
+      x.fillStyle = capCol; x.fillRect((trap.cx - trap.ridgeW / 2) * dpr, (trap.top - 4) * dpr, trap.ridgeW * dpr, 7 * dpr);
+      x.restore();
+      return c;
+    }
+
+    function place(t, now, delay){ if (t.s === 0 && t.p >= 1){ t.s = 1; t.from = 0; t.p = 0; t.delay = delay || 0; } }
+    function tear(t){ if (t.s === 1 && t.p >= 1){ t.s = 0; t.from = 1; t.p = 0; t.delay = 0; } }
+    function backOut(p){ var c = 1.9; p -= 1; return 1 + (c + 1) * p * p * p + c * p * p; }
+
+    function frame(dt, now){
+      if (build()) {}
+      var rect = cv.getBoundingClientRect();     // read every frame: the page scrolls under the finger
+      var px = P.x - rect.left, py = P.y - rect.top;
+      var inside = px > -ROOF.REACH && px < W + ROOF.REACH && py > -ROOF.REACH && py < H + ROOF.REACH;
+      var speed = Math.min(40, Math.hypot(P.vx, P.vy));
+      if (inside && (P.down || speed > 0.5)) lastTouch = now;
+      P.vx *= 0.85; P.vy *= 0.85;
+
+      // the roofer: bottom course first, left to right; tear-off goes the other way
+      var idle = now - lastTouch > ROOF.IDLE_RESUME;
+      acc += dt * 1000;
+      if (mode === 'roof'){
+        if (idle){
+          while (acc > ROOF.PLACE_MS){ acc -= ROOF.PLACE_MS;
+            while (cursor < tabs.length && tabs[cursor].s === 1) cursor++;
+            if (cursor < tabs.length) place(tabs[cursor++], now);
+          }
+        } else acc = 0;
+        var allNew = true; for (var i = 0; i < tabs.length; i++) if (tabs[i].s === 0){ allNew = false; break; }
+        if (allNew){ mode = 'hold'; modeT = now; }
+      } else if (mode === 'hold'){
+        acc = 0;
+        if (now - modeT > ROOF.DONE_HOLD && idle){ mode = 'tear'; tearCursor = tabs.length - 1; }
+      } else if (mode === 'tear'){
+        while (acc > ROOF.TEAR_MS){ acc -= ROOF.TEAR_MS; if (tearCursor >= 0) tear(tabs[tearCursor--]); }
+        if (tearCursor < 0){ mode = 'roof'; cursor = 0; modeT = now; acc = -900; }
+      }
+
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      ctx.save(); trapPath(ctx, dpr); ctx.clip();
+      var gustX = ((now / 1000) * 0.14 % 1.6 - 0.3) * W, ts = now / 1000;
+      for (var j = 0; j < tabs.length; j++){
+        var t = tabs[j];
+        // finger re-shingles old tabs and lifts new ones
+        var dx = t.cx - px, dy = t.cy - py, d = Math.hypot(dx, dy);
+        if (inside && d < ROOF.REACH){
+          var q = 1 - d / ROOF.REACH;
+          if (mode !== 'tear') { if (t.s === 0){ place(t, now, (1 - q) * 120); if (parts.length < 140 && Math.random() < 0.5) parts.push({ x: t.cx, y: t.cy, vx: (Math.random() - 0.5) * 60 + P.vx * 4, vy: -40 - Math.random() * 50, life: 1 }); } }
+          if (t.s === 1) t.lv += (q * q * ROOF.LIFT * 40 + speed * q * 6) * dt;
+        }
+        t.lv += (-ROOF.STIFF * t.l - ROOF.DAMP * t.lv) * dt; t.l += t.lv * dt;
+        if (t.l < -1) { t.l = -1; t.lv = 0; }
+        if (t.p < 1){ if (t.delay > 0) t.delay -= dt * 1000; else t.p = Math.min(1, t.p + dt / 0.42); }
+
+        var sx = t.x, sy = t.y, sw = t.w, sh = t.h;
+        if (t.s === 1 && t.p >= 1){
+          var g = Math.exp(-Math.pow(t.cx - gustX, 2) / (2 * 110 * 110));
+          var flutter = still ? 0 : g * ROOF.WIND * (0.5 + 0.5 * Math.sin(t.cx * 0.09 + ts * 7 + t.row)) + 0.35 * Math.max(0, Math.sin(t.cx * 0.02 - ts * 1.7 + t.row * 0.6));
+          var lift = Math.max(0, t.l) + flutter;
+          if (lift > 0.3){
+            ctx.fillStyle = 'rgba(8,10,14,' + Math.min(0.6, 0.12 + lift * 0.07) + ')';
+            ctx.fillRect(sx, sy + sh - 1 * dpr, sw, (lift + 1.5) * dpr);
+          }
+          ctx.drawImage(newC, sx, sy, sw, sh, sx, sy - lift * dpr, sw, sh);
+        } else if (t.s === 0 && t.p >= 1){
+          ctx.drawImage(oldC, sx, sy, sw, sh, sx, sy, sw, sh);
+        } else {
+          // a tab on its way: old underneath, new dropping in (or sliding off on tear-off)
+          ctx.drawImage(oldC, sx, sy, sw, sh, sx, sy, sw, sh);
+          var p = t.p;
+          if (t.s === 1){
+            var e = t.delay > 0 ? 0 : backOut(p);
+            ctx.globalAlpha = Math.min(1, p * 3);
+            ctx.drawImage(newC, sx, sy, sw, sh, sx, sy - (1 - e) * sh * 1.1, sw, sh);
+          } else {
+            ctx.globalAlpha = 1 - p;
+            ctx.drawImage(newC, sx, sy, sw, sh, sx, sy + p * p * sh * 1.6, sw, sh);
+          }
+          ctx.globalAlpha = 1;
+        }
+      }
+      // daylight across the plane: brighter toward the eave and the left, softer at the ridge
+      var lg = ctx.createLinearGradient(0, trap.top * dpr, cv.width * 0.35, trap.bottom * dpr);
+      lg.addColorStop(0, 'rgba(10,14,22,.38)'); lg.addColorStop(0.55, 'rgba(255,240,215,.04)'); lg.addColorStop(1, 'rgba(255,244,225,.10)');
+      ctx.fillStyle = lg; ctx.fillRect(0, 0, cv.width, cv.height);
+      ctx.restore();
+      // old granules shaken loose
+      for (var m = parts.length - 1; m >= 0; m--){
+        var a = parts[m]; a.vy += 420 * dt; a.x += a.vx * dt; a.y += a.vy * dt; a.life -= dt * 1.6;
+        if (a.life <= 0 || a.y > H){ parts.splice(m, 1); continue; }
+        ctx.fillStyle = 'rgba(150,134,110,' + a.life.toFixed(2) + ')';
+        ctx.fillRect(a.x * dpr, a.y * dpr, 2 * dpr, 2 * dpr);
+      }
+      // gutter + drip edge
+      var gy = (H - trap.gutterH) * dpr, gh = trap.gutterH * dpr;
+      ctx.fillStyle = '#B9BEC6'; ctx.fillRect(0, gy, cv.width, 2 * dpr);
+      var gg = ctx.createLinearGradient(0, gy + 2 * dpr, 0, gy + gh);
+      gg.addColorStop(0, '#F4F5F6'); gg.addColorStop(0.6, '#DADDE2'); gg.addColorStop(1, '#AEB4BD');
+      ctx.fillStyle = gg; ctx.fillRect(0, gy + 2 * dpr, cv.width, gh - 2 * dpr);
+    }
+
+    var scene = { frame: frame };
+    function startRoof(){
+      build();
+      if (still){ frame(0.016, performance.now()); return; }
+      register(wrap, scene);
+    }
+    window.addEventListener('resize', function(){ if (still){ if (build()) frame(0.016, performance.now()); } else wake(); });
+    // T&J/Above All lesson: let a finger drag the roof in every direction without scrolling the page
+    cv.addEventListener('touchmove', function(e){ if (e.cancelable) e.preventDefault(); }, { passive: false });
+    cv.addEventListener('pointerdown', function(e){ e.preventDefault(); lastTouch = performance.now(); if (e.pointerType !== 'mouse'){ P.down = true; } setP(e.clientX, e.clientY); });
+    startRoof();
+  }
+
+  /* ================= Eaves: one course along each dark section's edge ================= */
+  document.querySelectorAll('.eaveCanvas').forEach(function(ec){
+    var host = ec.parentNode, c = ec.getContext('2d'), W = 0, H = 0, dpr = 1, tabs = [], art = null;
+    var flip = ec.dataset.flip === '1';
+    function build(){
+      var r = host.getBoundingClientRect(), nw = Math.round(r.width), nh = Math.round(r.height);
+      if (nw === W && nh === H) return;
+      W = nw; H = nh; dpr = Math.min(window.devicePixelRatio || 1, ROOF.DPR_MAX);
+      ec.width = Math.round(W * dpr); ec.height = Math.round(H * dpr);
+      var R = rng(55 + W), tw = W < 760 ? ROOF.TAB_PHONE : ROOF.TAB_DESK, x = -R() * tw;
+      var rowH = H * 0.5, y0 = flip ? H * 0.32 : H * 0.18;
+      tabs = [];
+      while (x < W){ var w = tw * (0.62 + R() * 0.8); tabs.push({ x: x * dpr, y: y0 * dpr, w: w * dpr, h: rowH * dpr, cx: x + w / 2, cy: y0 + rowH / 2, row: 0, l: 0, lv: 0, seed: (R() * 1e9) | 0 }); x += w; }
+      art = document.createElement('canvas'); art.width = ec.width; art.height = ec.height;
+      var a = art.getContext('2d');
+      tabs.forEach(function(t){ paintTab(a, t, 'new', rng(t.seed)); });
+    }
+    function frame(dt, now){
+      build();
+      var rect = ec.getBoundingClientRect(), px = P.x - rect.left, py = P.y - rect.top, ts = now / 1000;
+      var speed = Math.min(40, Math.hypot(P.vx, P.vy));
+      c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, ec.width, ec.height);
+      var top = tabs.length ? tabs[0].y : 0;
+      c.fillStyle = '#1A2029'; c.fillRect(0, 0, ec.width, top + 2 * dpr);  // the course above, in shadow
+      var gustX = ((ts * 0.12) % 1.6 - 0.3) * W;
+      for (var i = 0; i < tabs.length; i++){
+        var t = tabs[i], d = Math.hypot(t.cx - px, t.cy - py);
+        if (d < ROOF.REACH * 1.2){ var q = 1 - d / (ROOF.REACH * 1.2); t.lv += (q * q * ROOF.LIFT * 40 + speed * q * 6) * dt; }
+        t.lv += (-ROOF.STIFF * t.l - ROOF.DAMP * t.lv) * dt; t.l += t.lv * dt; if (t.l < -1){ t.l = -1; t.lv = 0; }
+        var g = Math.exp(-Math.pow(t.cx - gustX, 2) / (2 * 120 * 120));
+        var lift = Math.max(0, t.l) + (still ? 0 : g * ROOF.WIND * (0.5 + 0.5 * Math.sin(t.cx * 0.09 + ts * 7)));
+        if (lift > 0.3){ c.fillStyle = 'rgba(8,10,14,' + Math.min(0.6, 0.12 + lift * 0.07) + ')'; c.fillRect(t.x, t.y + t.h - dpr, t.w, (lift + 1.5) * dpr); }
+        c.drawImage(art, t.x, t.y, t.w, t.h, t.x, t.y - lift * dpr, t.w, t.h);
+      }
+      // drip edge and gutter under the course
+      var gy = tabs.length ? tabs[0].y + tabs[0].h : 0, gh = (W < 760 ? 12 : 16) * dpr;
+      c.fillStyle = '#B9BEC6'; c.fillRect(0, gy, ec.width, 2 * dpr);
+      var gg = c.createLinearGradient(0, gy + 2 * dpr, 0, gy + gh);
+      gg.addColorStop(0, '#F4F5F6'); gg.addColorStop(0.6, '#DADDE2'); gg.addColorStop(1, '#AEB4BD');
+      c.fillStyle = gg; c.fillRect(0, gy + 2 * dpr, ec.width, gh - 2 * dpr);
+    }
+    build();
+    if (still){ frame(0, 0); window.addEventListener('resize', function(){ frame(0, 0); }); }
+    else register(host, { frame: frame });
+  });
+})();
+</script>
+</body>
+</html>
