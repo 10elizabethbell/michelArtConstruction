@@ -17,6 +17,15 @@
         ],
         "createdAt": "2026-10-19T11:46:14.059Z",
         "reason": "Claude triage: full-bleed section backgrounds whose .wrap child carries clamp(16px,5vw,56px) side padding; the ruled services list's top border is intentional. Verified in captures at 320-1440."
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T11:59:19.256Z",
+        "reason": "Claude triage: the 14-22px steps are distinct documented roles in DESIGN.md (legal, meta, body, lead, tagline); display steps jump to 32px+. Ellie may still merge steps."
       }
     ]
   }
